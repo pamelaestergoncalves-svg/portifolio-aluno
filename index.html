@@ -3,221 +3,287 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meu Futuro - Medicina Veterinária</title>
+<title>Futura Médica Veterinária</title>
+
+<!-- Biblioteca Partículas -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
     font-family: 'Segoe UI', sans-serif;
 }
 
-body {
-    background: linear-gradient(135deg, #5f2c82, #9b59b6);
-    color: white;
-    scroll-behavior: smooth;
+body{
+    background:#0f0f1a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Partículas */
+#particles-js{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
 }
 
 /* MENU */
-nav {
-    position: fixed;
-    width: 100%;
-    background: rgba(0,0,0,0.3);
-    padding: 15px;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    z-index: 1000;
+nav{
+    position:fixed;
+    width:100%;
+    background:rgba(0,0,0,0.7);
+    padding:15px;
+    text-align:center;
+    backdrop-filter:blur(10px);
+    z-index:1000;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    transition: 0.3s;
+nav a{
+    color:#bb86fc;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
 }
 
-nav a:hover {
-    color: #ffd6ff;
+nav a:hover{
+    color:white;
 }
 
 /* HEADER */
-header {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    animation: fadeIn 2s ease-in-out;
+header{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    animation:fadeIn 2s ease-in-out;
 }
 
-header h1 {
-    font-size: 3em;
+header h1{
+    font-size:3em;
+    color:#bb86fc;
 }
 
-header p {
-    margin-top: 15px;
-    font-size: 1.2em;
-}
-
-/* BOTÃO */
-.btn {
-    margin-top: 25px;
-    padding: 12px 25px;
-    border-radius: 30px;
-    border: none;
-    background: white;
-    color: #5f2c82;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.btn:hover {
-    transform: scale(1.1);
-    background: #f3e5ff;
+header p{
+    margin-top:15px;
+    font-size:1.2em;
 }
 
 /* SEÇÕES */
-section {
-    padding: 80px 20px;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(40px);
-    transition: 1s;
+section{
+    padding:80px 20px;
+    text-align:center;
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
 }
 
-section.show {
-    opacity: 1;
-    transform: translateY(0);
+section.show{
+    opacity:1;
+    transform:translateY(0);
 }
 
-.card {
-    background: white;
-    color: #5f2c82;
-    max-width: 700px;
-    margin: 30px auto;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+/* CARDS */
+.card{
+    background:#1c1c2e;
+    max-width:800px;
+    margin:30px auto;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(187,134,252,0.4);
 }
 
 /* GALERIA */
-.galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+.galeria{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
 }
 
-.galeria img {
-    width: 250px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 20px;
-    transition: 0.4s;
+.galeria img{
+    width:250px;
+    height:200px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:0.4s;
 }
 
-.galeria img:hover {
-    transform: scale(1.08);
+.galeria img:hover{
+    transform:scale(1.08);
+}
+
+/* VIDEO */
+iframe{
+    width:80%;
+    max-width:700px;
+    height:400px;
+    border-radius:15px;
+    margin-top:20px;
+}
+
+/* PROJETOS */
+.projeto{
+    background:#141426;
+    padding:20px;
+    margin:15px;
+    border-radius:15px;
+    display:inline-block;
+    width:250px;
+    transition:0.4s;
+}
+
+.projeto:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 15px #bb86fc;
+}
+
+/* FORMULÁRIO */
+form{
+    max-width:500px;
+    margin:20px auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input, textarea{
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    background:#2a2a40;
+    color:white;
+}
+
+button{
+    padding:10px;
+    border:none;
+    border-radius:20px;
+    background:#bb86fc;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:white;
 }
 
 /* FOOTER */
-footer {
-    padding: 20px;
-    background: rgba(0,0,0,0.3);
-    margin-top: 50px;
+footer{
+    padding:20px;
+    text-align:center;
+    background:#000;
+    margin-top:50px;
 }
 
-/* ANIMAÇÃO */
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
 }
 </style>
 </head>
 
 <body>
 
+<div id="particles-js"></div>
+
 <nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#animais">Animais</a>
-    <a href="#profissao">Profissão</a>
-    <a href="#objetivo">Objetivo</a>
+<a href="#sobre">Sobre</a>
+<a href="#video">Vídeo</a>
+<a href="#projetos">Projetos</a>
+<a href="#contato">Contato</a>
 </nav>
 
 <header>
-    <h1>Meu Sonho 💜🐾</h1>
-    <p>Futura Médica Veterinária</p>
-    <button class="btn" onclick="scrollToSection()">Descubra mais</button>
+<h1>Meu Futuro na Medicina Veterinária 💜🐾</h1>
+<p>Amor, dedicação e cuidado com os animais</p>
 </header>
 
 <section id="sobre">
-    <div class="card">
-        <h2>Sobre Meu Sonho 💖</h2>
-        <p>
-            Pretendo cursar Medicina Veterinária porque amo animais
-            e quero dedicar minha vida ao cuidado e bem-estar deles.
-            Meu sonho é ajudar cães, gatos, cavalos e muitos outros
-            a viverem com saúde e felicidade.
-        </p>
-    </div>
+<div class="card">
+<h2>Sobre Meu Sonho</h2>
+<p>
+Pretendo cursar Medicina Veterinária porque amo animais e desejo
+dedicar minha vida ao cuidado da saúde e bem-estar deles.
+Quero fazer a diferença na vida de cães, gatos, cavalos e muitos outros.
+</p>
+</div>
 </section>
 
-<section id="animais">
-    <h2>Animais que Amo 🐶🐱🐴</h2>
-    <div class="galeria">
-        <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16" alt="Cachorro">
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131" alt="Gato">
-        <img src="https://images.unsplash.com/photo-1501706362039-c6e08e8a19a7" alt="Cavalo">
-    </div>
+<section id="video">
+<h2>Minha Inspiração 🎥</h2>
+<iframe src="https://www.youtube.com/embed/6RZ4Zxgqz1A"
+allowfullscreen></iframe>
 </section>
 
-<section id="profissao">
-    <h2>Profissão Veterinária 👩‍⚕️</h2>
-    <div class="galeria">
-        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee" alt="Veterinária">
-        <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97" alt="Clínica">
-        <img src="https://images.unsplash.com/photo-1598137264821-9f9e7a8e1e7e" alt="Consulta">
-    </div>
+<section id="projetos">
+<h2>Projetos Futuros 📁</h2>
+
+<div class="projeto">
+<h3>Clínica Veterinária Própria</h3>
+<p>Ter minha própria clínica especializada em pequenos animais.</p>
+</div>
+
+<div class="projeto">
+<h3>Resgate Animal</h3>
+<p>Participar de projetos de resgate e reabilitação de animais.</p>
+</div>
+
+<div class="projeto">
+<h3>Especialização</h3>
+<p>Fazer especialização em cirurgia veterinária.</p>
+</div>
+
 </section>
 
-<section id="objetivo">
-    <div class="card">
-        <h2>Meu Objetivo 🎓</h2>
-        <p>
-            Quero estudar muito, entrar na faculdade,
-            me tornar uma profissional responsável e amorosa,
-            e transformar a vida de muitos animais.
-        </p>
-    </div>
+<section id="contato">
+<h2>Entre em Contato 📩</h2>
+
+<form>
+<input type="text" placeholder="Seu nome" required>
+<input type="email" placeholder="Seu email" required>
+<textarea rows="5" placeholder="Sua mensagem"></textarea>
+<button type="submit">Enviar</button>
+</form>
+
 </section>
 
 <footer>
-    <p>Site criado por uma futura Veterinária 💜🐾</p>
+<p>Desenvolvido por uma futura Médica Veterinária 💜🐾</p>
 </footer>
 
 <script>
-// Botão rolar
-function scrollToSection() {
-    document.getElementById("sobre").scrollIntoView({ behavior: "smooth" });
-}
-
-// Animação ao rolar
+/* Animação ao rolar */
 const sections = document.querySelectorAll("section");
-
 window.addEventListener("scroll", () => {
-    sections.forEach(sec => {
-        const top = sec.getBoundingClientRect().top;
-        if(top < window.innerHeight - 100) {
-            sec.classList.add("show");
-        }
-    });
+sections.forEach(sec => {
+const top = sec.getBoundingClientRect().top;
+if(top < window.innerHeight - 100){
+sec.classList.add("show");
+}
+});
+});
+
+/* Configuração das partículas */
+particlesJS("particles-js", {
+particles: {
+number: { value: 80 },
+color: { value: "#bb86fc" },
+shape: { type: "circle" },
+opacity: { value: 0.5 },
+size: { value: 3 },
+move: { enable: true, speed: 2 }
+}
 });
 </script>
 
 </body>
 </html>
+   
