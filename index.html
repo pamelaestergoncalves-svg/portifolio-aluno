@@ -1,112 +1,223 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Meu Sonho - Medicina Veterinária</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f9f4;
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meu Futuro - Medicina Veterinária</title>
 
-        header {
-            background-color: #2e8b57;
-            color: white;
-            padding: 30px;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
 
-        h1 {
-            margin: 0;
-        }
+body {
+    background: linear-gradient(135deg, #5f2c82, #9b59b6);
+    color: white;
+    scroll-behavior: smooth;
+}
 
-        section {
-            padding: 40px 20px;
-        }
+/* MENU */
+nav {
+    position: fixed;
+    width: 100%;
+    background: rgba(0,0,0,0.3);
+    padding: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
 
-        .imagem {
-            width: 250px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 15px;
-            margin: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-        .galeria {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+nav a:hover {
+    color: #ffd6ff;
+}
 
-        footer {
-            background-color: #2e8b57;
-            color: white;
-            padding: 15px;
-            margin-top: 20px;
-        }
+/* HEADER */
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
-        .card {
-            background: white;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 600px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-    </style>
+    animation: fadeIn 2s ease-in-out;
+}
+
+header h1 {
+    font-size: 3em;
+}
+
+header p {
+    margin-top: 15px;
+    font-size: 1.2em;
+}
+
+/* BOTÃO */
+.btn {
+    margin-top: 25px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    background: white;
+    color: #5f2c82;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background: #f3e5ff;
+}
+
+/* SEÇÕES */
+section {
+    padding: 80px 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card {
+    background: white;
+    color: #5f2c82;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* GALERIA */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.galeria img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.galeria img:hover {
+    transform: scale(1.08);
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    background: rgba(0,0,0,0.3);
+    margin-top: 50px;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+</style>
 </head>
+
 <body>
 
+<nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#animais">Animais</a>
+    <a href="#profissao">Profissão</a>
+    <a href="#objetivo">Objetivo</a>
+</nav>
+
 <header>
-    <h1>Meu Futuro na Medicina Veterinária 🐾</h1>
-    <p>Amor, cuidado e dedicação aos animais</p>
+    <h1>Meu Sonho 💜🐾</h1>
+    <p>Futura Médica Veterinária</p>
+    <button class="btn" onclick="scrollToSection()">Descubra mais</button>
 </header>
 
-<section>
+<section id="sobre">
     <div class="card">
-        <h2>Sobre Meu Sonho 💚</h2>
+        <h2>Sobre Meu Sonho 💖</h2>
         <p>
-            Pretendo cursar Medicina Veterinária porque amo animais e quero cuidar
-            da saúde e bem-estar de cães, gatos, cavalos e muitos outros.
-            Meu objetivo é ajudar os animais a viverem felizes e saudáveis.
+            Pretendo cursar Medicina Veterinária porque amo animais
+            e quero dedicar minha vida ao cuidado e bem-estar deles.
+            Meu sonho é ajudar cães, gatos, cavalos e muitos outros
+            a viverem com saúde e felicidade.
         </p>
     </div>
 </section>
 
-<section>
+<section id="animais">
     <h2>Animais que Amo 🐶🐱🐴</h2>
     <div class="galeria">
-        <img class="imagem" src="https://images.unsplash.com/photo-1558788353-f76d92427f16" alt="Cachorro">
-        <img class="imagem" src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131" alt="Gato">
-        <img class="imagem" src="https://images.unsplash.com/photo-1501706362039-c6e08e8a19a7" alt="Cavalo">
+        <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16" alt="Cachorro">
+        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131" alt="Gato">
+        <img src="https://images.unsplash.com/photo-1501706362039-c6e08e8a19a7" alt="Cavalo">
     </div>
 </section>
 
-<section>
-    <h2>Profissão Veterinária 👩‍⚕️🐾</h2>
+<section id="profissao">
+    <h2>Profissão Veterinária 👩‍⚕️</h2>
     <div class="galeria">
-        <img class="imagem" src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee" alt="Veterinária cuidando de cachorro">
-        <img class="imagem" src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97" alt="Clínica veterinária">
-        <img class="imagem" src="https://images.unsplash.com/photo-1598137264821-9f9e7a8e1e7e" alt="Exame em animal">
+        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee" alt="Veterinária">
+        <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97" alt="Clínica">
+        <img src="https://images.unsplash.com/photo-1598137264821-9f9e7a8e1e7e" alt="Consulta">
     </div>
 </section>
 
-<section>
+<section id="objetivo">
     <div class="card">
         <h2>Meu Objetivo 🎓</h2>
         <p>
-            Quero estudar muito, me dedicar à faculdade e me tornar uma
-            profissional responsável, amorosa e competente,
-            ajudando todos os animais que precisarem.
+            Quero estudar muito, entrar na faculdade,
+            me tornar uma profissional responsável e amorosa,
+            e transformar a vida de muitos animais.
         </p>
     </div>
 </section>
 
 <footer>
-    <p>Site criado por uma futura Veterinária 🐾💚</p>
+    <p>Site criado por uma futura Veterinária 💜🐾</p>
 </footer>
+
+<script>
+// Botão rolar
+function scrollToSection() {
+    document.getElementById("sobre").scrollIntoView({ behavior: "smooth" });
+}
+
+// Animação ao rolar
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100) {
+            sec.classList.add("show");
+        }
+    });
+});
+</script>
 
 </body>
 </html>
