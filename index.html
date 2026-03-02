@@ -1,64 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <title>Meu Portfólio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio Profissional</title>
 
-    <style>
-        body {
-            background-color: #f4f6f9;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
+<style>
+    body{
+        margin:0;
+        font-family: 'Segoe UI', sans-serif;
+        background:#f4f6fb;
+        color:#333;
+    }
 
-        h1 {
-            color: #2c3e50;
-        }
+    header{
+        background:linear-gradient(120deg,#1f3c88,#39a0ed);
+        color:white;
+        padding:60px 20px;
+        text-align:center;
+    }
 
-        h2 {
-            color: #2980b9;
-        }
+    header h1{
+        margin:0;
+        font-size:42px;
+    }
 
-        ul {
-            list-style: none;
-            padding: 0;
-        }
+    header p{
+        font-size:20px;
+        opacity:0.9;
+    }
 
-        li {
-            background-color: white;
-            margin: 10px auto;
-            padding: 10px;
-            width: 300px;
-            border-radius: 8px;
-        }
+    section{
+        padding:50px 20px;
+        max-width:1000px;
+        margin:auto;
+    }
 
-        .card {
-            background-color: white;
-            width: 400px;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-        }
-    </style>
+    h2{
+        text-align:center;
+        margin-bottom:30px;
+        color:#1f3c88;
+    }
+
+    .cards{
+        display:flex;
+        flex-wrap:wrap;
+        gap:20px;
+        justify-content:center;
+    }
+
+    .card{
+        background:white;
+        padding:25px;
+        width:280px;
+        border-radius:12px;
+        box-shadow:0 8px 20px rgba(0,0,0,0.08);
+        transition:0.3s;
+    }
+
+    .card:hover{
+        transform:translateY(-6px);
+    }
+
+    .btn{
+        display:inline-block;
+        margin-top:15px;
+        padding:10px 18px;
+        background:#1f3c88;
+        color:white;
+        border-radius:20px;
+        text-decoration:none;
+        font-size:14px;
+    }
+
+    footer{
+        background:#1f3c88;
+        color:white;
+        text-align:center;
+        padding:20px;
+        margin-top:40px;
+    }
+</style>
 </head>
 
 <body>
 
-    <div class="card">
-        <h1>Pamela Ester</h1>
+<header>
+    <h1>Daiane Silva Fonseca</h1>
+    <p>Desenvolvedor(a) | Professora de Sistemas | BACK-end</p>
+</header>
 
-        <h2>Sobre mim</h2>
-        <p>Sou estudante de Desenvolvimento de Sistemas.</p>
+<section>
+    <h2>Amo minha profissão</h2>
+    <p style="text-align:center; max-width:700px; margin:auto;">
+        Sou professora  de desenvolvimento de sistemas, apaixonado(a) por tecnologia,
+        programação e criação de projetos web. Este site reúne meus trabalhos,
+        habilidades e contatos profissionais.
+    </p>
+</section>
 
-        <h2>Meus Projetos</h2>
-        <ul>
-            <li>Projeto 1 - Site em HTML</li>
-            <li>Projeto 2 - Calculadora em Python</li>
-        </ul>
+<section>
+    <h2>Projetos</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Projeto 1</h3>
+            <p>Esse projeto é para aprendizagem doa alunos.</p>
+            <a href="#" class="btn">Ver projeto</a>
+        </div>
 
-        <h2>Contato</h2>
-        <p>Email: pamela.ester.goncalves@escola.pr.gov.br</p>
+        <div class="card">
+            <h3>Projeto 2</h3>
+            <p>Esse projeto é para interacão dos alunos.</p>
+            <a href="#" class="btn">Ver projeto</a>
+        </div>
+
+        <div class="card">
+            <h3>Projeto 3</h3>
+            <p>Projeto de aprendizagem.</p>
+            <a href="#" class="btn">Ver projeto</a>
+        </div>
     </div>
+</section>
+
+<section>
+    <h2>(44)999551506</h2>
+    <p style="text-align:center;">
+        📧 pamela.ester.goncalves@escolapr.gov.br<br>
+        💼 LinkedIn: seu perfil<br>
+        💻 GitHub: daifonseca1
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 - Daiane Silva Fonseca | Portfólio Profissional</p>
+</footer>
 
 </body>
-</html>q
+</html>
