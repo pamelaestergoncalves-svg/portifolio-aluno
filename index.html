@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,268 +12,283 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-    scroll-behavior:smooth;
+    font-family:'Poppins', sans-serif;
 }
 
 body{
-    background:#f4f8f4;
+    background:#f4f7f4;
+    color:#333;
 }
 
-/* MENU */
-nav{
-    background:#1f6b3d;
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    padding:15px;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#bdf7c6;
-}
-
-/* HERO */
-.hero{
-    height:90vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
-    background:
-    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-    url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=1600');
+header{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1500595046743-cd271d694d30');
     background-size:cover;
     background-position:center;
-    padding:20px;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
 }
 
 .hero h1{
-    font-size:clamp(32px,5vw,65px);
+    font-size:4rem;
+    margin-bottom:20px;
 }
 
 .hero p{
-    margin-top:10px;
-    font-size:clamp(16px,2vw,22px);
+    font-size:1.3rem;
+    max-width:800px;
+    margin:auto;
 }
 
 .btn{
-    margin-top:20px;
-    padding:12px 28px;
-    border:none;
-    border-radius:30px;
-    background:#56c271;
+    display:inline-block;
+    margin-top:25px;
+    padding:15px 35px;
+    background:#2e7d32;
     color:white;
-    cursor:pointer;
+    text-decoration:none;
+    border-radius:30px;
     transition:.3s;
 }
 
 .btn:hover{
-    transform:scale(1.05);
-    background:#3fa95c;
+    background:#1b5e20;
 }
 
-/* SEÇÕES */
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+    z-index:1000;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    padding:15px;
+}
+
+nav ul li{
+    margin:0 20px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#2e7d32;
+    font-weight:600;
+}
+
 section{
-    padding:70px 10%;
+    padding:80px 10%;
 }
 
-h2{
+.titulo{
     text-align:center;
-    color:#1f6b3d;
-    margin-bottom:25px;
+    margin-bottom:50px;
 }
 
-/* GRID */
-.grid{
+.titulo h2{
+    color:#2e7d32;
+    font-size:2.5rem;
+}
+
+.animais{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
 }
 
-/* CARDS */
 .card{
     background:white;
-    padding:20px;
     border-radius:15px;
-    box-shadow:0 4px 12px rgba(0,0,0,.15);
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
     transition:.3s;
-    text-align:center;
 }
 
 .card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-10px);
 }
 
-/* IMAGENS */
-img{
+.card img{
     width:100%;
-    border-radius:12px;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    color:#2e7d32;
     margin-bottom:10px;
 }
 
-/* FORM */
-input,textarea{
-    width:100%;
-    padding:10px;
-    margin:8px 0;
-    border-radius:10px;
-    border:1px solid #ccc;
+.beneficios{
+    background:#e8f5e9;
 }
 
-button{
-    width:100%;
-    padding:12px;
-    background:#1f6b3d;
-    color:white;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
+.lista-beneficios{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
 }
 
-button:hover{
-    background:#2e8b57;
+.item{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
 }
 
-/* FOOTER */
+.item h3{
+    color:#2e7d32;
+    margin-bottom:10px;
+}
+
 footer{
-    background:#1f6b3d;
+    background:#1b5e20;
     color:white;
     text-align:center;
-    padding:25px;
-    margin-top:40px;
+    padding:30px;
 }
 
-/* ANIMAÇÃO */
-.fade{
-    animation:fadeUp 1s ease;
-}
-
-@keyframes fadeUp{
-    from{opacity:0; transform:translateY(20px);}
-    to{opacity:1; transform:translateY(0);}
+footer p{
+    margin:5px 0;
 }
 </style>
 </head>
-
 <body>
 
-<!-- MENU -->
 <nav>
-<a href="#inicio">Início</a>
-<a href="#animais">Animais</a>
-<a href="#cuidados">Cuidados</a>
-<a href="#contato">Contato</a>
+<ul>
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#animais">Animais</a></li>
+<li><a href="#cuidados">Cuidados</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
 </nav>
 
-<!-- HERO -->
-<section id="inicio" class="hero fade">
-<div>
+<header>
+<div class="hero">
 <h1>Saúde e Qualidade de Vida Animal</h1>
-<p>Cuidar dos animais é investir em bem-estar, produção e sustentabilidade 🌿🐄</p>
-<button class="btn">Saiba Mais</button>
+<p>
+Promovendo o bem-estar, a nutrição adequada e os cuidados veterinários para animais de produção e criação.
+</p>
+<a href="#sobre" class="btn">Saiba Mais</a>
 </div>
-</section>
+</header>
 
-<!-- SOBRE -->
-<section class="fade">
-<h2>Bem-estar Animal</h2>
-<p style="text-align:center; line-height:1.8;">
-A saúde animal é essencial para garantir produtividade, qualidade de vida e equilíbrio ambiental.
+<section id="sobre">
+<div class="titulo">
+<h2>Nosso Compromisso</h2>
+</div>
+
+<p style="text-align:center; max-width:900px; margin:auto;">
+Garantir a saúde dos animais é essencial para sua qualidade de vida, produtividade e longevidade.
+O manejo adequado, alimentação balanceada, vacinação e acompanhamento veterinário contribuem para um ambiente mais saudável e sustentável.
 </p>
 </section>
 
-<!-- ANIMAIS -->
-<section id="animais" class="fade">
-<h2>Nossos Animais</h2>
+<section id="animais">
+<div class="titulo">
+<h2>Animais Atendidos</h2>
+</div>
 
-<div class="grid">
+<div class="animais">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a">
-<h3>Vaca</h3>
-<p>Produção de leite</p>
+<img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a" alt="Vaca">
+<div class="card-content">
+<h3>Vacas</h3>
+<p>Cuidados nutricionais, prevenção de doenças e manejo adequado para maior bem-estar.</p>
+</div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a">
-<h3>Cavalo</h3>
-<p>Trabalho rural</p>
+<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a" alt="Cavalo">
+<div class="card-content">
+<h3>Cavalos</h3>
+<p>Monitoramento físico, alimentação equilibrada e atividades adequadas.</p>
+</div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1484557985045-edf25e08da73">
-<h3>Carneiro</h3>
-<p>Lã e carne</p>
+<img src="https://images.unsplash.com/photo-1484557052118-f32bd25b45b5" alt="Carneiro">
+<div class="card-content">
+<h3>Carneiros</h3>
+<p>Bem-estar do rebanho, controle sanitário e acompanhamento veterinário.</p>
+</div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30">
-<h3>Boi</h3>
-<p>Carne bovina</p>
+<img src="https://images.unsplash.com/photo-1560114928-40f1f1eb26a0" alt="Boi">
+<div class="card-content">
+<h3>Bois</h3>
+<p>Estratégias de manejo para melhorar a saúde e a produtividade.</p>
+</div>
 </div>
 
 </div>
 </section>
 
-<!-- CUIDADOS -->
-<section id="cuidados" class="fade">
+<section class="beneficios" id="cuidados">
+<div class="titulo">
 <h2>Cuidados Essenciais</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>💉 Vacinação</h3>
-<p>Previne doenças</p>
 </div>
 
-<div class="card">
-<h3>🥗 Nutrição</h3>
-<p>Alimentação saudável</p>
+<div class="lista-beneficios">
+
+<div class="item">
+<h3>Vacinação</h3>
+<p>Proteção contra doenças e fortalecimento da saúde do rebanho.</p>
 </div>
 
-<div class="card">
-<h3>🩺 Veterinário</h3>
-<p>Acompanhamento constante</p>
+<div class="item">
+<h3>Nutrição</h3>
+<p>Alimentação balanceada para crescimento e desenvolvimento saudável.</p>
 </div>
 
-<div class="card">
-<h3>🧼 Higiene</h3>
-<p>Ambiente limpo e seguro</p>
+<div class="item">
+<h3>Higiene</h3>
+<p>Ambientes limpos reduzem riscos de infecções e parasitas.</p>
+</div>
+
+<div class="item">
+<h3>Acompanhamento Veterinário</h3>
+<p>Diagnóstico precoce e prevenção de problemas de saúde.</p>
 </div>
 
 </div>
 </section>
 
-<!-- CONTATO -->
-<section id="contato" class="fade">
+<section id="contato">
+<div class="titulo">
 <h2>Contato</h2>
-
-<div class="card" style="max-width:400px; margin:auto;">
-<form>
-<input placeholder="Nome">
-<input placeholder="Email">
-<textarea placeholder="Mensagem"></textarea>
-<button>Enviar</button>
-</form>
 </div>
+
+<p style="text-align:center;">
+📞 (00) 00000-0000<br><br>
+📧 contato@saudeanimal.com.br<br><br>
+📍 Brasil
+</p>
 </section>
 
 <footer>
-<h3>🐄 Saúde e Qualidade de Vida Animal 🐎</h3>
-<p>Projeto Educacional</p>
+<p>© 2026 Saúde e Qualidade de Vida Animal</p>
+<p>Projeto Educacional sobre Bem-Estar Animal</p>
 </footer>
 
 </body>
 </html>
+
+    
+
