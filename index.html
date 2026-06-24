@@ -1,132 +1,637 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saúde e Qualidade de Vida Animal</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #d8ffd8, #f5fff5);
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        nav {
-            background: #1f6b3d;
-            padding: 15px;
-            text-align: center;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 15px;
-            font-size: 18px;
-            font-weight: bold;
-        }
+body{
+    background:#f4f8f4;
+}
 
-        nav a:hover {
-            color: #c5f7b7;
-        }
+/* MENU */
+nav{
+    background:#1f6b3d;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:20px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
 
-        h1 {
-            text-align: center;
-            color: #1f6b3d;
-            margin-top: 30px;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+    transition:.3s;
+}
 
-        .formulario {
-            width: 400px;
-            margin: 40px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
+nav a:hover{
+    color:#c5f7b7;
+}
 
-        label {
-            font-weight: bold;
-            color: #1f6b3d;
-        }
+/* BANNER */
+.banner{
+    height:90vh;
+    background:
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=1600');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
 
-        input,
-        textarea {
-            width: 100%;
-            padding: 12px;
-            margin-top: 5px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            box-sizing: border-box;
-        }
+.banner h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
 
-        textarea {
-            height: 120px;
-            resize: none;
-        }
+.banner p{
+    font-size:20px;
+}
 
-        button {
-            width: 100%;
-            background: #1f6b3d;
-            color: white;
-            border: none;
-            padding: 15px;
-            border-radius: 10px;
-            font-size: 16px;
-            cursor: pointer;
-        }
+.botao{
+    margin-top:25px;
+    background:#56c271;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:30px;
+    font-size:18px;
+}
 
-        button:hover {
-            background: #2e8b57;
-        }
+/* SEÇÕES */
+section{
+    padding:80px 10%;
+}
 
-        .info {
-            text-align: center;
-            margin-top: 30px;
-            color: #333;
-        }
-    </style>
+/* SOBRE */
+.sobre h2,
+.galeria h2,
+.beneficios h2,
+.animais h2,
+.contato h2{
+    color:#1f6b3d;
+    font-size:40px;
+    text-align:center;
+    margin-bottom:25px;
+}
 
+.sobre p{
+    font-size:18px;
+    line-height:1.8;
+    text-align:center;
+}
+
+/* GALERIA */
+.fotos{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.fotos img{
+    width:280px;
+    height:200px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+/* CARDS */
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.card{
+    background:white;
+    width:260px;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+/* ANIMAIS */
+.animais-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.animal{
+    background:white;
+    width:260px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+    text-align:center;
+}
+
+.animal img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+/* CONTATO */
+.formulario{
+    width:350px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:15px;
+}
+
+button{
+    width:100%;
+    background:#1f6b3d;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:10px;
+}
+
+/* FOOTER */
+footer{
+    background:#1f6b3d;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+</style>
 </head>
 
 <body>
 
-    <nav>
-        <a href="página.html">Início</a>
-        <a href="animais.html">Animais</a>
-        <a href="cuidados.html">Cuidados</a>
-        <a href="contato.html">Contato</a>
-    </nav>
+<!-- MENU -->
+<nav>
+    <a href="#inicio">Início</a>
+    <a href="#animais">Animais</a>
+    <a href="#cuidados">Cuidados</a>
+    <a href="#contato">Contato</a>
+</nav>
 
-    <h1>📞 Entre em Contato</h1>
+<!-- INÍCIO -->
+<section id="inicio" class="banner">
+    <div>
+        <h1>Saúde e Qualidade de Vida Animal</h1>
+        <p>Cuidar dos animais é investir em bem-estar, produtividade e sustentabilidade.</p>
+        <button class="botao">Saiba Mais</button>
+    </div>
+</section>
+
+<section class="sobre">
+    <h2>Bem-estar Animal</h2>
+    <p>
+        A saúde dos animais é essencial para qualidade de vida e produção sustentável.
+        Alimentação adequada, vacinação e acompanhamento veterinário são fundamentais.
+    </p>
+</section>
+
+<!-- GALERIA -->
+<section class="galeria">
+    <h2>Galeria</h2>
+    <div class="fotos">
+        <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a">
+        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a">
+        <img src="https://images.unsplash.com/photo-1507149833265-60c372daea22">
+    </div>
+</section>
+
+<!-- ANIMAIS -->
+<section id="animais" class="animais">
+    <h2>Nossos Animais</h2>
+
+    <div class="animais-container">
+
+        <div class="animal">
+            <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a">
+            <h3>Vaca</h3>
+        </div>
+
+        <div class="animal">
+            <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a">
+            <h3>Cavalo</h3>
+        </div>
+
+        <div class="animal">
+            <img src="https://images.unsplash.com/photo-1484557985045-edf25e08da73">
+            <h3>Carneiro</h3>
+        </div>
+
+        <div class="animal">
+            <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30">
+            <h3>Boi</h3>
+        </div>
+
+    </div>
+</section>
+
+<!-- CUIDADOS -->
+<section id="cuidados" class="beneficios">
+    <h2>Cuidados Essenciais</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Vacinação</h3>
+            <p>Previne doenças e aumenta a longevidade.</p>
+        </div>
+
+        <div class="card">
+            <h3>Nutrição</h3>
+            <p>Alimentação equilibrada e saudável.</p>
+        </div>
+
+        <div class="card">
+            <h3>Veterinário</h3>
+            <p>Monitoramento constante da saúde.</p>
+        </div>
+
+        <div class="card">
+            <h3>Higiene</h3>
+            <p>Ambientes limpos e seguros.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="contato">
+    <h2>Contato</h2>
 
     <div class="formulario">
-
         <form>
+            <label>Nome</label>
+            <input type="text">
 
-            <label>Nome:</label>
-            <input type="text" placeholder="Digite seu nome">
+            <label>Email</label>
+            <input type="email">
 
-            <label>E-mail:</label>
-            <input type="email" placeholder="Digite seu e-mail">
+            <label>Mensagem</label>
+            <textarea></textarea>
 
-            <label>Mensagem:</label>
-            <textarea placeholder="Digite sua mensagem"></textarea>
-
-            <button type="submit">Enviar Mensagem</button>
-
+            <button>Enviar</button>
         </form>
-
     </div>
+</section>
 
-    <div class="info">
-        <h3>🐄 Saúde e Qualidade de Vida Animal</h3>
-        <p>Email: contato@saudeanimal.com</p>
-        <p>Telefone: (44) 99137-3500</p>
-    </div>
+<footer>
+    <h3>🐄 Saúde e Qualidade de Vida Animal 🐎</h3>
+    <p>Projeto Educacional</p>
+</footer>
 
 </body>
+</html><!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saúde e Qualidade de Vida Animal</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f8f4;
+}
+
+/* MENU */
+nav{
+    background:#1f6b3d;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:20px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#c5f7b7;
+}
+
+/* BANNER */
+.banner{
+    height:90vh;
+    background:
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=1600');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.banner h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.banner p{
+    font-size:20px;
+}
+
+.botao{
+    margin-top:25px;
+    background:#56c271;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:30px;
+    font-size:18px;
+}
+
+/* SEÇÕES */
+section{
+    padding:80px 10%;
+}
+
+/* SOBRE */
+.sobre h2,
+.galeria h2,
+.beneficios h2,
+.animais h2,
+.contato h2{
+    color:#1f6b3d;
+    font-size:40px;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.sobre p{
+    font-size:18px;
+    line-height:1.8;
+    text-align:center;
+}
+
+/* GALERIA */
+.fotos{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.fotos img{
+    width:280px;
+    height:200px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+/* CARDS */
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.card{
+    background:white;
+    width:260px;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+/* ANIMAIS */
+.animais-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.animal{
+    background:white;
+    width:260px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+    text-align:center;
+}
+
+.animal img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+/* CONTATO */
+.formulario{
+    width:350px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:15px;
+}
+
+button{
+    width:100%;
+    background:#1f6b3d;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:10px;
+}
+
+/* FOOTER */
+footer{
+    background:#1f6b3d;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MENU -->
+<nav>
+    <a href="#inicio">Início</a>
+    <a href="#animais">Animais</a>
+    <a href="#cuidados">Cuidados</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<!-- INÍCIO -->
+<section id="inicio" class="banner">
+    <div>
+        <h1>Saúde e Qualidade de Vida Animal</h1>
+        <p>Cuidar dos animais é investir em bem-estar, produtividade e sustentabilidade.</p>
+        <button class="botao">Saiba Mais</button>
+    </div>
+</section>
+
+<section class="sobre">
+    <h2>Bem-estar Animal</h2>
+    <p>
+        A saúde dos animais é essencial para qualidade de vida e produção sustentável.
+        Alimentação adequada, vacinação e acompanhamento veterinário são fundamentais.
+    </p>
+</section>
+
+<!-- GALERIA -->
+<section class="galeria">
+    <h2>Galeria</h2>
+    <div class="fotos">
+        <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a">
+        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a">
+        <img src="https://images.unsplash.com/photo-1507149833265-60c372daea22">
+    </div>
+</section>
+
+<!-- ANIMAIS -->
+<section id="animais" class="animais">
+    <h2>Nossos Animais</h2>
+
+    <div class="animais-container">
+
+        <div class="animal">
+            <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a">
+            <h3>Vaca</h3>
+        </div>
+
+        <div class="animal">
+            <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a">
+            <h3>Cavalo</h3>
+        </div>
+
+        <div class="animal">
+            <img src="https://images.unsplash.com/photo-1484557985045-edf25e08da73">
+            <h3>Carneiro</h3>
+        </div>
+
+        <div class="animal">
+            <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30">
+            <h3>Boi</h3>
+        </div>
+
+    </div>
+</section>
+
+<!-- CUIDADOS -->
+<section id="cuidados" class="beneficios">
+    <h2>Cuidados Essenciais</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Vacinação</h3>
+            <p>Previne doenças e aumenta a longevidade.</p>
+        </div>
+
+        <div class="card">
+            <h3>Nutrição</h3>
+            <p>Alimentação equilibrada e saudável.</p>
+        </div>
+
+        <div class="card">
+            <h3>Veterinário</h3>
+            <p>Monitoramento constante da saúde.</p>
+        </div>
+
+        <div class="card">
+            <h3>Higiene</h3>
+            <p>Ambientes limpos e seguros.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="contato">
+    <h2>Contato</h2>
+
+    <div class="formulario">
+        <form>
+            <label>Nome</label>
+            <input type="text">
+
+            <label>Email</label>
+            <input type="email">
+
+            <label>Mensagem</label>
+            <textarea></textarea>
+
+            <button>Enviar</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <h3>🐄 Saúde e Qualidade de Vida Animal 🐎</h3>
+    <p>Projeto Educacional</p>
+</footer>
+
+</body>
 </html>
