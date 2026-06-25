@@ -1,326 +1,216 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Fazenda Talismã | Saúde, Bem-Estar e Qualidade Animal</title>
+<title>Saúde e Bem-Estar Animal</title>
 
-<meta name="description" content="Fazenda Talismã - Referência em saúde animal, manejo sustentável, bem-estar e qualidade de vida para bovinos, equinos e ovinos.">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
-
-:root{
---verde:#2e7d32;
---verde-escuro:#1b5e20;
---verde-claro:#e8f5e9;
---branco:#ffffff;
---cinza:#666;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
 body{
-background:#f8faf7;
-color:#333;
-overflow-x:hidden;
+    background:#f4fff4;
 }
+
+/* MENU */
 
 nav{
-position:fixed;
-top:0;
-width:100%;
-padding:18px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(255,255,255,.95);
-backdrop-filter:blur(8px);
-box-shadow:0 3px 15px rgba(0,0,0,.08);
-z-index:1000;
-transition:.3s;
-}
-
-.logo-nav{
-font-size:1.4rem;
-font-weight:800;
-color:var(--verde);
-}
-
-nav ul{
-display:flex;
-list-style:none;
-gap:25px;
-flex-wrap:wrap;
+    background:#1f6b3d;
+    padding:20px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
 nav a{
-text-decoration:none;
-color:var(--verde);
-font-weight:600;
-transition:.3s;
+    color:white;
+    text-decoration:none;
+    margin:20px;
+    font-size:18px;
+    font-weight:bold;
 }
 
 nav a:hover{
-color:var(--verde-escuro);
+    color:#c5f7b7;
 }
 
-.hero{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-color:white;
-background:
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-url('https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=1800');
-background-size:cover;
-background-position:center;
+/* BANNER */
+
+.banner{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url("https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=1600");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
 }
 
-.hero-content{
-max-width:900px;
-animation:fade 1.2s ease;
+.banner h1{
+    font-size:60px;
 }
 
-.hero h1{
-font-size:4rem;
-margin-bottom:20px;
+.banner p{
+    font-size:24px;
+    margin-top:15px;
 }
 
-.hero p{
-font-size:1.2rem;
-line-height:1.8;
+.botao{
+    margin-top:25px;
+    background:#56c271;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
 }
 
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:15px 35px;
-background:var(--verde);
-color:white;
-text-decoration:none;
-border-radius:50px;
-font-weight:700;
-transition:.3s;
+.botao:hover{
+    background:#3ca557;
 }
 
-.btn:hover{
-background:var(--verde-escuro);
-transform:translateY(-3px);
-}
+/* SEÇÕES */
 
 section{
-padding:100px 10%;
+    padding:70px 10%;
 }
 
-.titulo{
-text-align:center;
-margin-bottom:60px;
+h2{
+    text-align:center;
+    color:#1f6b3d;
+    margin-bottom:30px;
+    font-size:40px;
 }
 
-.titulo h2{
-font-size:2.7rem;
-color:var(--verde);
+.sobre p{
+    text-align:center;
+    line-height:1.8;
+    font-size:18px;
 }
 
-.sobre{
-max-width:1000px;
-margin:auto;
-text-align:center;
-line-height:2;
-font-size:1.05rem;
+/* GALERIA */
+
+.galeria{
+    background:#e8f6e8;
 }
+
+.fotos{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.fotos img{
+    width:300px;
+    height:220px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    transition:.4s;
+}
+
+.fotos img:hover{
+    transform:scale(1.08);
+}
+
+/* EQUIPE */
 
 .cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
 }
 
 .card{
-background:white;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
-transition:.4s;
-}
-
-.card:hover{
-transform:translateY(-10px);
+    background:white;
+    width:300px;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.2);
 }
 
 .card img{
-width:100%;
-height:250px;
-object-fit:cover;
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
 }
 
-.card-content{
-padding:25px;
+.card h3{
+    color:#1f6b3d;
+    margin-top:15px;
 }
 
-.card-content h3{
-color:var(--verde);
-margin-bottom:10px;
+/* SERVIÇOS */
+
+.servicos{
+    background:#e8f6e8;
 }
 
-.valores{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+.card-servico{
+    background:white;
+    width:280px;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.2);
 }
 
-.valor{
-background:white;
-padding:30px;
-border-radius:20px;
-text-align:center;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
+/* MAPA */
 
-.valor i{
-font-size:45px;
-color:var(--verde);
-margin-bottom:15px;
-}
-
-.estatisticas{
-background:var(--verde-claro);
-}
-
-.numeros{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-}
-
-.numero{
-background:white;
-padding:35px;
-border-radius:20px;
-text-align:center;
-}
-
-.numero h3{
-font-size:2.2rem;
-color:var(--verde);
-}
-
-.timeline{
-max-width:900px;
-margin:auto;
-}
-
-.item{
-background:white;
-padding:25px;
-margin-bottom:20px;
-border-left:6px solid var(--verde);
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.06);
-}
-
-.depoimentos{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-}
-
-.depoimento{
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
+.mapa{
+    text-align:center;
 }
 
 .mapa iframe{
-width:100%;
-height:450px;
-border:none;
-border-radius:20px;
+    width:90%;
+    height:450px;
+    border:none;
+    border-radius:20px;
 }
 
-.contato{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-text-align:center;
-}
-
-.contato-box{
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-}
-
-.contato-box i{
-font-size:40px;
-color:var(--verde);
-margin-bottom:15px;
-}
-
-footer{
-background:var(--verde-escuro);
-color:white;
-text-align:center;
-padding:50px 20px;
-}
+/* WHATSAPP */
 
 .whatsapp{
-position:fixed;
-right:25px;
-bottom:25px;
-width:70px;
-height:70px;
-border-radius:50%;
-background:#25D366;
-display:flex;
-justify-content:center;
-align-items:center;
-color:white;
-font-size:35px;
-text-decoration:none;
-box-shadow:0 5px 20px rgba(0,0,0,.3);
-z-index:999;
+    background:#25D366;
+    color:white;
+    border:none;
+    padding:18px 35px;
+    border-radius:30px;
+    font-size:20px;
+    cursor:pointer;
 }
 
-@keyframes fade{
-from{
-opacity:0;
-transform:translateY(30px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+.whatsapp:hover{
+    transform:scale(1.05);
 }
 
-@media(max-width:768px){
+/* RODAPÉ */
 
-.hero h1{
-font-size:2.5rem;
-}
-
-nav{
-flex-direction:column;
-gap:10px;
-}
-
+footer{
+    background:#1f6b3d;
+    color:white;
+    text-align:center;
+    padding:25px;
 }
 
 </style>
@@ -330,178 +220,59 @@ gap:10px;
 <body>
 
 <nav>
-
-<div class="logo-nav">
-🌿 Fazenda Talismã
-</div>
-
-<ul>
-<li><a href="#sobre">Sobre</a></li>
-<li><a href="#valores">Valores</a></li>
-<li><a href="#animais">Animais</a></li>
-<li><a href="#historia">História</a></li>
-<li><a href="#equipe">Equipe</a></li>
-<li><a href="#contato">Contato</a></li>
-</ul>
-
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#equipe">Equipe</a>
+    <a href="#mapa">Localização</a>
+    <a href="#contato">Contato</a>
 </nav>
 
-<header class="hero">
+<section class="banner" id="inicio">
 
-<div class="hero-content">
+<div>
 
-<h1>Fazenda Talismã</h1>
+<h1>🐄 Saúde e Bem-Estar Animal 🐎</h1>
 
 <p>
-Tradição, inovação e compromisso com a saúde animal.
-Promovendo bem-estar, manejo sustentável e qualidade de vida para nossos rebanhos.
+Garantindo qualidade de vida para vacas, bois,
+cavalos, carneiros e outros animais.
 </p>
 
-<a href="#sobre" class="btn">
-Conheça Nossa História
+<a href="#sobre">
+<button class="botao">
+Saiba Mais
+</button>
 </a>
 
 </div>
 
-</header>
+</section>
 
-<section id="sobre">
+<section class="sobre" id="sobre">
 
-<div class="titulo">
-<h2>Sobre a Fazenda</h2>
-</div>
-
-<div class="sobre">
+<h2>🌱 Sobre o Projeto</h2>
 
 <p>
-Localizada em Jussara - Goiás, a Fazenda Talismã atua com excelência no cuidado de bovinos, equinos e ovinos. Nossa missão é oferecer qualidade de vida animal através de práticas modernas, acompanhamento veterinário permanente e manejo sustentável.
+O projeto Saúde e Bem-Estar Animal busca promover a conscientização sobre os
+cuidados necessários para garantir uma vida saudável aos animais de produção.
+A alimentação balanceada, vacinação, higiene, manejo correto e acompanhamento
+veterinário são fundamentais para assegurar qualidade de vida, conforto e
+produtividade aos animais.
 </p>
 
-</div>
-
 </section>
 
-<section id="valores">
+<section class="galeria">
 
-<div class="titulo">
-<h2>Missão, Visão e Valores</h2>
-</div>
+<h2>🐄 Nossos Animais</h2>
 
-<div class="valores">
+<div class="fotos">
 
-<div class="valor">
-<i class="fas fa-bullseye"></i>
-<h3>Missão</h3>
-<p>Promover saúde e bem-estar animal com responsabilidade.</p>
-</div>
+<img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?q=80&w=1200">
 
-<div class="valor">
-<i class="fas fa-eye"></i>
-<h3>Visão</h3>
-<p>Ser referência nacional em qualidade animal.</p>
-</div>
+<img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=1200">
 
-<div class="valor">
-<i class="fas fa-heart"></i>
-<h3>Valores</h3>
-<p>Ética, sustentabilidade, inovação e respeito à vida.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="animais">
-
-<div class="titulo">
-<h2>Nossos Animais</h2>
-</div>
-
-<div class="cards">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=800">
-<div class="card-content">
-<h3>Bovinos</h3>
-<p>Cuidados sanitários, vacinação e manejo especializado.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800">
-<div class="card-content">
-<h3>Equinos</h3>
-<p>Monitoramento constante e bem-estar diário.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1484557052118-2c648d0436e0?w=800">
-<div class="card-content">
-<h3>Ovinos</h3>
-<p>Nutrição balanceada e manejo sustentável.</p>
-</div>
-</div>
-
-</div>
-
-</section>
-
-<section class="estatisticas">
-
-<div class="titulo">
-<h2>Nossos Números</h2>
-</div>
-
-<div class="numeros">
-
-<div class="numero">
-<h3>500+</h3>
-<p>Animais Assistidos</p>
-</div>
-
-<div class="numero">
-<h3>24h</h3>
-<p>Monitoramento</p>
-</div>
-
-<div class="numero">
-<h3>100%</h3>
-<p>Compromisso</p>
-</div>
-
-<div class="numero">
-<h3>1998</h3>
-<p>Fundação</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="historia">
-
-<div class="titulo">
-<h2>Nossa História</h2>
-</div>
-
-<div class="timeline">
-
-<div class="item">
-<strong>1998</strong> — Fundação da Fazenda Talismã.
-</div>
-
-<div class="item">
-<strong>2005</strong> — Ampliação da estrutura rural.
-</div>
-
-<div class="item">
-<strong>2018</strong> — Modernização dos processos de manejo.
-</div>
-
-<div class="item">
-<strong>2026</strong> — Referência em saúde e bem-estar animal.
-</div>
+<img src="https://images.unsplash.com/photo-1484557985045-edf25e08da73?q=80&w=1200">
 
 </div>
 
@@ -509,100 +280,96 @@ Localizada em Jussara - Goiás, a Fazenda Talismã atua com excelência no cuida
 
 <section id="equipe">
 
-<div class="titulo">
-<h2>Nossa Equipe</h2>
-</div>
+<h2>👩‍⚕️ Nossa Equipe</h2>
 
 <div class="cards">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800">
-<div class="card-content">
-<h3>Nicolly</h3>
-<p><strong>Atendimento</strong></p>
-<p>Responsável pelo relacionamento com clientes.</p>
-</div>
+
+<img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=500">
+
+<h3>Dra. Pamela</h3>
+
+<p>Médica Veterinária</p>
+
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800">
-<div class="card-content">
-<h3>Dra. Pamela</h3>
-<p><strong>Médica Veterinária</strong></p>
-<p>Responsável pela saúde e acompanhamento animal.</p>
-</div>
+
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500">
+
+<h3>Nicolly</h3>
+
+<p>Atendente</p>
+
 </div>
 
 </div>
 
 </section>
 
-<section id="contato">
+<section class="servicos">
 
-<div class="titulo">
-<h2>Contato</h2>
+<h2>🩺 Serviços</h2>
+
+<div class="cards">
+
+<div class="card-servico">
+<h3>Vacinação</h3>
+<p>Proteção e prevenção contra doenças.</p>
 </div>
 
-<div class="contato">
+<div class="card-servico">
+<h3>Consultas Veterinárias</h3>
+<p>Acompanhamento profissional dos animais.</p>
+</div>
 
-<div class="contato-box">
+<div class="card-servico">
+<h3>Nutrição Animal</h3>
+<p>Orientação alimentar para melhor qualidade de vida.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="mapa" id="mapa">
+
+<h2>📍 Fazenda de Referência</h2>
+
+<iframe
+src="https://www.google.com/maps?q=Fazenda+Colorado+Araras+SP&output=embed">
+</iframe>
+
+</section>
+
+<section id="contato" style="text-align:center;">
+
+<h2>📲 Entre em Contato</h2>
+
+<a href="https://wa.me/5511999999999" target="_blank">
+
+<button class="whatsapp">
+
 <i class="fab fa-whatsapp"></i>
-<h3>WhatsApp</h3>
-<p>(44) 99803-2205</p>
-</div>
 
-<div class="contato-box">
-<i class="fas fa-map-marker-alt"></i>
-<h3>Localização</h3>
-<p>Jussara - Goiás</p>
-</div>
+Falar no WhatsApp
 
-<div class="contato-box">
-<i class="fas fa-clock"></i>
-<h3>Atendimento</h3>
-<p>Segunda a Sábado</p>
-</div>
+</button>
 
-</div>
-
-</section>
-
-<section>
-
-<div class="titulo">
-<h2>Localização</h2>
-</div>
-
-<div class="mapa">
-
-<iframe src="https://maps.google.com/maps?q=Jussara%20Goias&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-
-</div>
+</a>
 
 </section>
 
 <footer>
 
-<h3>Fazenda Talismã</h3>
+<h3>🐄 Saúde e Bem-Estar Animal 🐎</h3>
 
-<p>Saúde • Sustentabilidade • Bem-estar Animal</p>
-
-<p style="margin-top:15px;">
-© <span id="ano"></span> Fazenda Talismã - Todos os direitos reservados.
+<p>
+Projeto Educacional sobre Qualidade de Vida Animal
 </p>
 
 </footer>
-
-<a href="https://wa.me/5544998032205" class="whatsapp" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-<script>
-
-document.getElementById('ano').innerHTML =
-new Date().getFullYear();
-
-</script>
 
 </body>
 </html>
