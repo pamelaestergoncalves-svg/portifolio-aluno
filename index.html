@@ -1,330 +1,1962 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JV CELL | Acessórios para Celular</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Ícones -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Explora Brasil | Guia Turístico</title>
 
-<!-- Fonte -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Explora Brasil - descubra destinos, culturas, praias, natureza e gastronomia do Brasil.">
 
-<style>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
 
-body{
-background:#111;
-color:#fff;
-}
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-background:#000;
-padding:18px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:1000;
-box-shadow:0 0 20px #ffd000;
-}
+    <style>
 
-.logo{
-font-size:32px;
-font-weight:bold;
-color:#FFD700;
-}
+        /* =========================
+           RESET
+        ========================= */
 
-.logo i{
-margin-right:10px;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-nav a{
-text-decoration:none;
-color:white;
-margin-left:25px;
-font-size:17px;
-transition:.3s;
-}
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #f7f9f5;
+            color: #222;
+        }
 
-nav a:hover{
-color:#FFD700;
-}
+        img {
+            max-width: 100%;
+            display: block;
+        }
 
-.banner{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:30px;
-background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
-url("https://images.unsplash.com/photo-1511707171634-5f897ff02aa9") center/cover;
-}
+        a {
+            text-decoration: none;
+        }
 
-.banner h1{
-font-size:65px;
-color:#FFD700;
-margin-bottom:15px;
-text-shadow:0 0 20px #FFD700;
-}
+        section {
+            scroll-margin-top: 90px;
+        }
 
-.banner p{
-font-size:22px;
-margin-bottom:30px;
-}
 
-.btn{
-display:inline-block;
-padding:15px 35px;
-background:#FFD700;
-color:#000;
-text-decoration:none;
-font-weight:bold;
-border-radius:40px;
-transition:.4s;
-margin:10px;
-}
+        /* =========================
+           VARIÁVEIS
+        ========================= */
 
-.btn:hover{
-background:#fff;
-transform:scale(1.08);
-}
+        :root {
+            --verde: #006b3c;
+            --verde-escuro: #004d2c;
+            --amarelo: #ffd700;
+            --azul: #0086c9;
+            --branco: #ffffff;
+            --cinza: #f4f4f4;
+            --texto: #222;
+        }
 
-.pesquisa{
-background:#1b1b1b;
-padding:60px 8%;
-text-align:center;
-}
 
-.pesquisa h2{
-font-size:40px;
-color:#FFD700;
-margin-bottom:25px;
-}
+        /* =========================
+           HEADER
+        ========================= */
 
-.caixa-pesquisa{
-display:flex;
-justify-content:center;
-max-width:700px;
-margin:auto;
-}
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 75px;
 
-.caixa-pesquisa input{
-width:100%;
-padding:18px;
-border:none;
-font-size:18px;
-border-radius:50px 0 0 50px;
-outline:none;
-}
+            background: rgba(0, 77, 44, 0.96);
 
-.caixa-pesquisa button{
-padding:18px 30px;
-border:none;
-background:#FFD700;
-font-size:18px;
-cursor:pointer;
-border-radius:0 50px 50px 0;
-font-weight:bold;
-}
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
-.sobre{
-padding:90px 8%;
-display:flex;
-flex-wrap:wrap;
-align-items:center;
-gap:50px;
-background:#111;
-}
+            padding: 0 7%;
 
-.sobre img{
-width:450px;
-max-width:100%;
-border-radius:20px;
-box-shadow:0 0 30px #FFD700;
-}
+            z-index: 1000;
 
-.texto{
-flex:1;
-}
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
 
-.texto h2{
-font-size:45px;
-color:#FFD700;
-margin-bottom:20px;
-}
+        .logo {
+            color: white;
+            font-size: 25px;
+            font-weight: 800;
+        }
 
-.texto p{
-font-size:18px;
-line-height:1.9;
-}
+        .logo span {
+            color: var(--amarelo);
+        }
 
-.destaques{
-padding:70px 8%;
-background:#1a1a1a;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
+        .logo i {
+            color: var(--amarelo);
+            margin-right: 7px;
+        }
 
-.card{
-background:#000;
-padding:35px;
-border-radius:18px;
-text-align:center;
-transition:.4s;
-border:2px solid transparent;
-}
+        nav {
+            display: flex;
+            gap: 25px;
+        }
 
-.card:hover{
-transform:translateY(-10px);
-border-color:#FFD700;
-}
+        nav a {
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
 
-.card i{
-font-size:55px;
-color:#FFD700;
-margin-bottom:20px;
-}
+        nav a:hover {
+            color: var(--amarelo);
+        }
 
-.card h3{
-margin-bottom:15px;
-font-size:25px;
-}
+        .menu-btn {
+            display: none;
+            color: white;
+            font-size: 25px;
+            cursor: pointer;
+        }
 
-.card p{
-color:#ddd;
-}
 
-section{
-scroll-margin-top:100px;
-}
+        /* =========================
+           HERO
+        ========================= */
 
-</style>
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 120px 20px 80px;
+
+            background:
+                linear-gradient(
+                    rgba(0, 60, 35, 0.55),
+                    rgba(0, 0, 0, 0.45)
+                ),
+                url("https://images.unsplash.com/photo-1483729558449-99ef09a8c325")
+                center/cover;
+        }
+
+        .hero-content {
+            color: white;
+            max-width: 900px;
+        }
+
+        .hero-content small {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 3px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+
+            font-size: clamp(48px, 8vw, 90px);
+
+            margin: 15px 0;
+
+            line-height: 1.05;
+        }
+
+        .hero h1 span {
+            color: var(--amarelo);
+        }
+
+        .hero p {
+            font-size: 19px;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 15px 30px;
+
+            border-radius: 40px;
+
+            font-weight: 700;
+
+            margin: 5px;
+
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--amarelo);
+            color: #222;
+        }
+
+        .btn-secondary {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+        }
+
+        .btn-primary:hover {
+            background: white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--verde);
+        }
+
+
+        /* =========================
+           BUSCA
+        ========================= */
+
+        .search-section {
+            background: white;
+
+            width: 85%;
+            max-width: 1000px;
+
+            margin: -50px auto 0;
+
+            position: relative;
+            z-index: 10;
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .search-section h2 {
+            text-align: center;
+            color: var(--verde);
+            margin-bottom: 20px;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-box input {
+            flex: 1;
+
+            padding: 17px 20px;
+
+            border: 2px solid #ddd;
+
+            border-radius: 12px;
+
+            font-size: 16px;
+
+            outline: none;
+        }
+
+        .search-box input:focus {
+            border-color: var(--verde);
+        }
+
+        .search-box button {
+            border: none;
+
+            background: var(--verde);
+
+            color: white;
+
+            padding: 0 30px;
+
+            border-radius: 12px;
+
+            cursor: pointer;
+
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           TÍTULOS
+        ========================= */
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title span {
+            color: var(--verde);
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 14px;
+        }
+
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+
+            font-size: 45px;
+
+            margin-top: 10px;
+        }
+
+
+        /* =========================
+           DESTINOS
+        ========================= */
+
+        .destinos {
+            padding: 110px 7%;
+        }
+
+        .destino-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(260px, 1fr));
+
+            gap: 25px;
+        }
+
+        .destino-card {
+            position: relative;
+
+            height: 370px;
+
+            overflow: hidden;
+
+            border-radius: 20px;
+
+            cursor: pointer;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .destino-card img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.6s;
+        }
+
+        .destino-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .destino-info {
+            position: absolute;
+
+            bottom: 0;
+            left: 0;
+
+            width: 100%;
+
+            padding: 30px 20px;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    transparent,
+                    rgba(0,0,0,0.9)
+                );
+        }
+
+        .destino-info h3 {
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+        .destino-info p {
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           REGIÕES
+        ========================= */
+
+        .regioes {
+            background: var(--verde);
+
+            padding: 100px 7%;
+
+            color: white;
+        }
+
+        .regioes .section-title h2 {
+            color: white;
+        }
+
+        .regiao-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(180px, 1fr));
+
+            gap: 20px;
+        }
+
+        .regiao {
+            background: rgba(255,255,255,0.1);
+
+            padding: 30px 15px;
+
+            text-align: center;
+
+            border-radius: 15px;
+
+            transition: 0.3s;
+
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .regiao:hover {
+            background: var(--amarelo);
+            color: #222;
+            transform: translateY(-8px);
+        }
+
+        .regiao i {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .regiao h3 {
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           EXPERIÊNCIAS
+        ========================= */
+
+        .experiencias {
+            padding: 110px 7%;
+        }
+
+        .experiencia-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 25px;
+        }
+
+        .experiencia {
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+            transition: 0.3s;
+        }
+
+        .experiencia:hover {
+            transform: translateY(-8px);
+        }
+
+        .experiencia i {
+            font-size: 45px;
+            color: var(--verde);
+            margin-bottom: 20px;
+        }
+
+        .experiencia h3 {
+            margin-bottom: 12px;
+        }
+
+        .experiencia p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           CULTURA
+        ========================= */
+
+        .cultura {
+            padding: 100px 7%;
+
+            background: #f0f5ef;
+        }
+
+        .cultura-container {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+        .cultura img {
+            width: 100%;
+
+            height: 450px;
+
+            object-fit: cover;
+
+            border-radius: 25px;
+        }
+
+        .cultura-text h2 {
+            font-family: 'Playfair Display', serif;
+
+            font-size: 45px;
+
+            margin-bottom: 20px;
+
+            color: var(--verde);
+        }
+
+        .cultura-text p {
+            line-height: 1.9;
+
+            color: #555;
+
+            margin-bottom: 20px;
+        }
+
+        .check {
+            display: flex;
+            gap: 12px;
+
+            margin: 12px 0;
+
+            font-weight: 600;
+        }
+
+        .check i {
+            color: var(--verde);
+        }
+
+
+        /* =========================
+           GASTRONOMIA
+        ========================= */
+
+        .gastronomia {
+            padding: 110px 7%;
+        }
+
+        .comidas {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 25px;
+        }
+
+        .comida {
+            background: white;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+
+            transition: 0.3s;
+        }
+
+        .comida:hover {
+            transform: translateY(-8px);
+        }
+
+        .comida img {
+            width: 100%;
+            height: 210px;
+
+            object-fit: cover;
+        }
+
+        .comida-info {
+            padding: 20px;
+        }
+
+        .comida-info h3 {
+            color: var(--verde);
+            margin-bottom: 8px;
+        }
+
+        .comida-info p {
+            color: #666;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           DICAS
+        ========================= */
+
+        .dicas {
+            padding: 100px 7%;
+
+            background: var(--verde-escuro);
+
+            color: white;
+        }
+
+        .dicas .section-title h2 {
+            color: white;
+        }
+
+        .dicas-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 25px;
+        }
+
+        .dica {
+            padding: 30px;
+
+            border-radius: 18px;
+
+            background: rgba(255,255,255,0.1);
+        }
+
+        .dica i {
+            color: var(--amarelo);
+
+            font-size: 35px;
+
+            margin-bottom: 20px;
+        }
+
+        .dica h3 {
+            margin-bottom: 10px;
+        }
+
+        .dica p {
+            color: #ddd;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           AVALIAÇÕES
+        ========================= */
+
+        .avaliacoes {
+            padding: 110px 7%;
+        }
+
+        .avaliacoes-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(270px, 1fr));
+
+            gap: 25px;
+        }
+
+        .avaliacao {
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .estrelas {
+            color: #ffc400;
+            margin-bottom: 15px;
+        }
+
+        .avaliacao p {
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .usuario {
+            margin-top: 20px;
+            font-weight: 700;
+            color: var(--verde);
+        }
+
+
+        /* =========================
+           NEWSLETTER
+        ========================= */
+
+        .newsletter {
+            padding: 80px 7%;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    var(--verde),
+                    var(--azul)
+                );
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+        }
+
+        .newsletter p {
+            margin: 15px 0 25px;
+        }
+
+        .newsletter-form {
+            max-width: 600px;
+            margin: auto;
+
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+
+            padding: 16px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            outline: none;
+        }
+
+        .newsletter-form button {
+            padding: 0 25px;
+
+            border: none;
+
+            background: var(--amarelo);
+
+            font-weight: 700;
+
+            border-radius: 10px;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #002d1a;
+
+            color: white;
+
+            padding: 70px 7% 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+
+            grid-template-columns:
+                2fr 1fr 1fr 1fr;
+
+            gap: 40px;
+
+            margin-bottom: 50px;
+        }
+
+        footer h3 {
+            color: var(--amarelo);
+
+            margin-bottom: 20px;
+        }
+
+        footer p {
+            color: #ccc;
+
+            line-height: 1.8;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin: 10px 0;
+        }
+
+        footer a {
+            color: #ccc;
+
+            transition: 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--amarelo);
+        }
+
+        .social {
+            display: flex;
+            gap: 15px;
+
+            margin-top: 20px;
+        }
+
+        .social a {
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(255,255,255,0.1);
+
+            border-radius: 50%;
+
+            font-size: 18px;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.15);
+
+            padding-top: 25px;
+
+            text-align: center;
+
+            color: #aaa;
+        }
+
+
+        /* =========================
+           VOLTAR AO TOPO
+        ========================= */
+
+        #topo {
+            position: fixed;
+
+            right: 25px;
+            bottom: 25px;
+
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: var(--amarelo);
+
+            color: #222;
+
+            border-radius: 50%;
+
+            font-size: 20px;
+
+            z-index: 999;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+
+        /* =========================
+           RESPONSIVIDADE
+        ========================= */
+
+        @media(max-width:900px) {
+
+            nav {
+                position: absolute;
+
+                top: 75px;
+                right: -100%;
+
+                width: 250px;
+
+                background: var(--verde-escuro);
+
+                flex-direction: column;
+
+                padding: 25px;
+
+                transition: 0.4s;
+            }
+
+            nav.active {
+                right: 0;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .cultura-container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+        @media(max-width:600px) {
+
+            header {
+                padding: 0 5%;
+            }
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .search-box {
+                flex-direction: column;
+            }
+
+            .search-box button {
+                padding: 15px;
+            }
+
+            .section-title h2 {
+                font-size: 35px;
+            }
+
+            .cultura-text h2 {
+                font-size: 35px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-form button {
+                padding: 15px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
 
-<div class="logo">
-<i class="fa-solid fa-mobile-screen-button"></i>
-JV CELL
-</div>
+    <a href="#inicio" class="logo">
+        <i class="fa-solid fa-compass"></i>
+        Explora <span>Brasil</span>
+    </a>
 
-<nav>
-<a href="#inicio">Início</a>
-<a href="#sobre">Sobre</a>
-<a href="#produtos">Produtos</a>
-<a href="#servicos">Serviços</a>
-<a href="#contato">Contato</a>
-</nav>
+    <nav id="menu">
+
+        <a href="#inicio">Início</a>
+
+        <a href="#destinos">Destinos</a>
+
+        <a href="#regioes">Regiões</a>
+
+        <a href="#experiencias">Experiências</a>
+
+        <a href="#cultura">Cultura</a>
+
+        <a href="#contato">Contato</a>
+
+    </nav>
+
+    <div class="menu-btn" onclick="abrirMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
 
 </header>
 
-<section class="banner" id="inicio">
 
-<div>
+<!-- =========================
+     HERO
+========================= -->
 
-<h1>JV CELL</h1>
+<section class="hero" id="inicio">
 
-<p>
-A melhor loja de acessórios para celular.
-Qualidade, preço baixo e atendimento de confiança.
-</p>
+    <div class="hero-content">
 
-<a href="#produtos" class="btn">
-Ver Produtos
+        <small>SEU GUIA PELO BRASIL</small>
+
+        <h1>
+            Descubra o
+            <span>Brasil</span>
+        </h1>
+
+        <p>
+            Explore praias paradisíacas, cidades históricas,
+            natureza exuberante, culturas incríveis e sabores
+            que fazem do Brasil um destino inesquecível.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#destinos" class="btn btn-primary">
+                <i class="fa-solid fa-location-dot"></i>
+                Explorar destinos
+            </a>
+
+            <a href="#experiencias" class="btn btn-secondary">
+                Ver experiências
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     BUSCA
+========================= -->
+
+<section class="search-section">
+
+    <h2>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        Onde você quer explorar?
+    </h2>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="pesquisa"
+            placeholder="Ex: Rio de Janeiro, Bahia, praias..."
+        >
+
+        <button onclick="buscarDestino()">
+            Buscar
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DESTINOS
+========================= -->
+
+<section class="destinos" id="destinos">
+
+    <div class="section-title">
+
+        <span>DESTINOS INCRÍVEIS</span>
+
+        <h2>
+            Lugares para conhecer
+        </h2>
+
+    </div>
+
+
+    <div class="destino-grid">
+
+
+        <article class="destino-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325"
+                alt="Rio de Janeiro">
+
+            <div class="destino-info">
+
+                <h3>Rio de Janeiro</h3>
+
+                <p>
+                    Praias, montanhas e muita energia.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="destino-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1544989164-31dc3c645987"
+                alt="Salvador">
+
+            <div class="destino-info">
+
+                <h3>Salvador</h3>
+
+                <p>
+                    Cultura, história e gastronomia.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="destino-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e"
+                alt="Foz do Iguaçu">
+
+            <div class="destino-info">
+
+                <h3>Foz do Iguaçu</h3>
+
+                <p>
+                    Uma das maiores maravilhas naturais.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="destino-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1526392060635-9d6019884377"
+                alt="Amazônia">
+
+            <div class="destino-info">
+
+                <h3>Amazônia</h3>
+
+                <p>
+                    Floresta, rios e biodiversidade.
+                </p>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     REGIÕES
+========================= -->
+
+<section class="regioes" id="regioes">
+
+    <div class="section-title">
+
+        <span>CONHEÇA O PAÍS</span>
+
+        <h2>Regiões do Brasil</h2>
+
+    </div>
+
+
+    <div class="regiao-grid">
+
+        <div class="regiao">
+            <i class="fa-solid fa-sun"></i>
+            <h3>Norte</h3>
+        </div>
+
+        <div class="regiao">
+            <i class="fa-solid fa-umbrella-beach"></i>
+            <h3>Nordeste</h3>
+        </div>
+
+        <div class="regiao">
+            <i class="fa-solid fa-city"></i>
+            <h3>Centro-Oeste</h3>
+        </div>
+
+        <div class="regiao">
+            <i class="fa-solid fa-mountain-sun"></i>
+            <h3>Sudeste</h3>
+        </div>
+
+        <div class="regiao">
+            <i class="fa-solid fa-leaf"></i>
+            <h3>Sul</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EXPERIÊNCIAS
+========================= -->
+
+<section class="experiencias" id="experiencias">
+
+    <div class="section-title">
+
+        <span>VIVA NOVAS EXPERIÊNCIAS</span>
+
+        <h2>O que fazer no Brasil?</h2>
+
+    </div>
+
+
+    <div class="experiencia-grid">
+
+        <div class="experiencia">
+
+            <i class="fa-solid fa-water"></i>
+
+            <h3>Praias</h3>
+
+            <p>
+                Descubra praias incríveis,
+                águas cristalinas e paisagens
+                inesquecíveis.
+            </p>
+
+        </div>
+
+
+        <div class="experiencia">
+
+            <i class="fa-solid fa-tree"></i>
+
+            <h3>Natureza</h3>
+
+            <p>
+                Conheça florestas, cachoeiras,
+                trilhas e parques naturais.
+            </p>
+
+        </div>
+
+
+        <div class="experiencia">
+
+            <i class="fa-solid fa-landmark"></i>
+
+            <h3>História</h3>
+
+            <p>
+                Explore cidades históricas,
+                museus e patrimônios culturais.
+            </p>
+
+        </div>
+
+
+        <div class="experiencia">
+
+            <i class="fa-solid fa-music"></i>
+
+            <h3>Cultura</h3>
+
+            <p>
+                Música, festas, arte e tradições
+                de todas as regiões.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CULTURA
+========================= -->
+
+<section class="cultura" id="cultura">
+
+    <div class="cultura-container">
+
+        <img
+            src="https://images.unsplash.com/photo-1526392060635-9d6019884377"
+            alt="Natureza brasileira">
+
+
+        <div class="cultura-text">
+
+            <h2>
+                Um país de muitas histórias
+            </h2>
+
+            <p>
+                O Brasil possui uma enorme diversidade
+                cultural, natural e histórica.
+                Cada região apresenta seus próprios
+                costumes, paisagens e tradições.
+            </p>
+
+            <div class="check">
+                <i class="fa-solid fa-circle-check"></i>
+                Diversidade cultural
+            </div>
+
+            <div class="check">
+                <i class="fa-solid fa-circle-check"></i>
+                Natureza exuberante
+            </div>
+
+            <div class="check">
+                <i class="fa-solid fa-circle-check"></i>
+                Gastronomia brasileira
+            </div>
+
+            <div class="check">
+                <i class="fa-solid fa-circle-check"></i>
+                Cidades históricas
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GASTRONOMIA
+========================= -->
+
+<section class="gastronomia">
+
+    <div class="section-title">
+
+        <span>SABORES DO BRASIL</span>
+
+        <h2>Gastronomia brasileira</h2>
+
+    </div>
+
+
+    <div class="comidas">
+
+
+        <div class="comida">
+
+            <img
+                src="https://images.unsplash.com/photo-1589302168068-964664d93dc0"
+                alt="Feijoada">
+
+            <div class="comida-info">
+
+                <h3>Feijoada</h3>
+
+                <p>
+                    Um dos pratos mais conhecidos
+                    da culinária brasileira.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="comida">
+
+            <img
+                src="https://images.unsplash.com/photo-1601050690597-df0568f70950"
+                alt="Comida brasileira">
+
+            <div class="comida-info">
+
+                <h3>Sabores regionais</h3>
+
+                <p>
+                    Cada região possui ingredientes
+                    e receitas únicas.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="comida">
+
+            <img
+                src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc"
+                alt="Açaí">
+
+            <div class="comida-info">
+
+                <h3>Açaí</h3>
+
+                <p>
+                    Um sabor muito popular,
+                    especialmente na região Norte.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="comida">
+
+            <img
+                src="https://images.unsplash.com/photo-1600891964092-4316c288032e"
+                alt="Comida">
+
+            <div class="comida-info">
+
+                <h3>Culinária brasileira</h3>
+
+                <p>
+                    Uma mistura de sabores,
+                    culturas e tradições.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DICAS
+========================= -->
+
+<section class="dicas">
+
+    <div class="section-title">
+
+        <span>PLANEJE SUA VIAGEM</span>
+
+        <h2>Dicas para viajar</h2>
+
+    </div>
+
+
+    <div class="dicas-grid">
+
+
+        <div class="dica">
+
+            <i class="fa-solid fa-calendar-days"></i>
+
+            <h3>Planeje com antecedência</h3>
+
+            <p>
+                Pesquise o destino, hospedagem,
+                transporte e atrações antes da viagem.
+            </p>
+
+        </div>
+
+
+        <div class="dica">
+
+            <i class="fa-solid fa-suitcase"></i>
+
+            <h3>Prepare sua mala</h3>
+
+            <p>
+                Escolha roupas e itens de acordo
+                com o clima e as atividades.
+            </p>
+
+        </div>
+
+
+        <div class="dica">
+
+            <i class="fa-solid fa-camera"></i>
+
+            <h3>Registre os momentos</h3>
+
+            <p>
+                Aproveite a viagem e registre
+                suas melhores lembranças.
+            </p>
+
+        </div>
+
+
+        <div class="dica">
+
+            <i class="fa-solid fa-heart"></i>
+
+            <h3>Respeite o destino</h3>
+
+            <p>
+                Preserve a natureza e respeite
+                as culturas e comunidades locais.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     AVALIAÇÕES
+========================= -->
+
+<section class="avaliacoes">
+
+    <div class="section-title">
+
+        <span>EXPERIÊNCIAS</span>
+
+        <h2>O que nossos viajantes dizem</h2>
+
+    </div>
+
+
+    <div class="avaliacoes-grid">
+
+
+        <div class="avaliacao">
+
+            <div class="estrelas">
+                ★★★★★
+            </div>
+
+            <p>
+                "O Explora Brasil me ajudou a descobrir
+                lugares que eu nem sabia que existiam.
+                O site ficou muito fácil de usar!"
+            </p>
+
+            <div class="usuario">
+                — Mariana
+            </div>
+
+        </div>
+
+
+        <div class="avaliacao">
+
+            <div class="estrelas">
+                ★★★★★
+            </div>
+
+            <p>
+                "Adorei conhecer mais sobre as regiões
+                e a cultura brasileira."
+            </p>
+
+            <div class="usuario">
+                — Gabriel
+            </div>
+
+        </div>
+
+
+        <div class="avaliacao">
+
+            <div class="estrelas">
+                ★★★★★
+            </div>
+
+            <p>
+                "Um guia simples, bonito e cheio
+                de ideias para viajar pelo Brasil."
+            </p>
+
+            <div class="usuario">
+                — Ana
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     NEWSLETTER
+========================= -->
+
+<section class="newsletter">
+
+    <h2>
+        Receba inspiração para sua próxima viagem
+    </h2>
+
+    <p>
+        Cadastre seu e-mail e descubra novos destinos.
+    </p>
+
+    <div class="newsletter-form">
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Digite seu melhor e-mail">
+
+        <button onclick="inscrever()">
+            Inscrever-se
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer id="contato">
+
+    <div class="footer-grid">
+
+
+        <div>
+
+            <h3>
+                <i class="fa-solid fa-compass"></i>
+                Explora Brasil
+            </h3>
+
+            <p>
+                Seu guia turístico para descobrir
+                as belezas, culturas, sabores e
+                experiências do Brasil.
+            </p>
+
+            <div class="social">
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <h3>Explorar</h3>
+
+            <ul>
+
+                <li>
+                    <a href="#destinos">Destinos</a>
+                </li>
+
+                <li>
+                    <a href="#regioes">Regiões</a>
+                </li>
+
+                <li>
+                    <a href="#experiencias">Experiências</a>
+                </li>
+
+                <li>
+                    <a href="#cultura">Cultura</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>Informações</h3>
+
+            <ul>
+
+                <li>
+                    <a href="#">Sobre nós</a>
+                </li>
+
+                <li>
+                    <a href="#">Dicas de viagem</a>
+                </li>
+
+                <li>
+                    <a href="#">Contato</a>
+                </li>
+
+                <li>
+                    <a href="#">Privacidade</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>Contato</h3>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                contato@explorabrasil.com
+            </p>
+
+            <p>
+                <i class="fa-solid fa-earth-americas"></i>
+                Brasil
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 Explora Brasil —
+        Todos os direitos reservados.
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     VOLTAR AO TOPO
+========================= -->
+
+<a href="#inicio" id="topo">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
 </a>
 
-<a href="#contato" class="btn">
-Fale Conosco
-</a>
 
-</div>
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
-</section>
+<script>
 
-<section class="pesquisa">
+    /* MENU MOBILE */
 
-<h2>Encontre seu acessório</h2>
+    function abrirMenu() {
 
-<div class="caixa-pesquisa">
+        const menu = document.getElementById("menu");
 
-<input
-type="text"
-placeholder="Pesquisar capinhas, cabos, carregadores, fones..."
->
+        menu.classList.toggle("active");
 
-<button>
-<i class="fa-solid fa-magnifying-glass"></i>
-</button>
+    }
 
-</div>
 
-</section>
+    /* PESQUISA */
 
-<section class="sobre" id="sobre">
+    function buscarDestino() {
 
-<img src="https://images.unsplash.com/photo-1512499617640-c74ae3a79d37" alt="Loja">
+        const pesquisa =
+            document.getElementById("pesquisa").value
+            .toLowerCase()
+            .trim();
 
-<div class="texto">
+        if (pesquisa === "") {
 
-<h2>Quem Somos</h2>
+            alert("Digite um destino para pesquisar!");
 
-<p>
-A <strong>JV CELL</strong> é especializada em acessórios para celulares.
-Trabalhamos com capinhas, películas, cabos, carregadores, fones de ouvido e diversos acessórios de alta qualidade.
+            return;
 
-Também oferecemos serviços de <strong>impressão</strong> e <strong>xerox</strong>, sempre com rapidez, qualidade e ótimo atendimento.
-</p>
+        }
 
-</div>
+        const destinos = [
+            "rio de janeiro",
+            "salvador",
+            "foz do iguaçu",
+            "amazônia",
+            "norte",
+            "nordeste",
+            "sul",
+            "sudeste",
+            "centro-oeste",
+            "praia",
+            "natureza"
+        ];
 
-</section>
+        const encontrado =
+            destinos.some(destino =>
+                destino.includes(pesquisa)
+            );
 
-<section class="destaques">
+        if (encontrado) {
 
-<div class="card">
-<i class="fa-solid fa-truck-fast"></i>
-<h3>Entrega Rápida</h3>
-<p>Agilidade e segurança em cada pedido.</p>
-</div>
+            alert(
+                "Boa escolha! 🌎✨\n\n" +
+                "Encontramos informações sobre: " +
+                pesquisa
+            );
 
-<div class="card">
-<i class="fa-solid fa-shield-halved"></i>
-<h3>Qualidade Garantida</h3>
-<p>Acessórios das melhores marcas.</p>
-</div>
+            document
+                .getElementById("destinos")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
 
-<div class="card">
-<i class="fa-solid fa-headset"></i>
-<h3>Atendimento</h3>
-<p>Suporte rápido pelo WhatsApp.</p>
-</div>
+        } else {
 
-<div class="card">
-<i class="fa-solid fa-print"></i>
-<h3>Impressão e Xerox</h3>
-<p>Documentos coloridos e preto e branco.</p>
-</div>
+            alert(
+                "Ainda não temos esse destino cadastrado. " +
+                "Experimente pesquisar por Rio de Janeiro, " +
+                "Salvador, Foz do Iguaçu ou Amazônia."
+            );
 
-</section>
+        }
 
-<!-- A Parte 2 continuará com:
-Produtos, carrinho, promoções, avaliações e muito mais. -->
+    }
+
+
+    /* NEWSLETTER */
+
+    function inscrever() {
+
+        const email =
+            document.getElementById("email").value;
+
+        if (email === "") {
+
+            alert("Digite seu e-mail!");
+
+            return;
+
+        }
+
+        if (!email.includes("@")) {
+
+            alert("Digite um e-mail válido!");
+
+            return;
+
+        }
+
+        alert(
+            "Cadastro realizado com sucesso! 🇧🇷✨\n\n" +
+            "Agora você receberá novidades do Explora Brasil."
+        );
+
+        document.getElementById("email").value = "";
+
+    }
+
+
+    /* ANIMAÇÃO AO ROLAR */
+
+    const elementos =
+        document.querySelectorAll(
+            ".destino-card, .experiencia, .comida, .dica, .avaliacao"
+        );
+
+    const observador =
+        new IntersectionObserver(
+            entradas => {
+
+                entradas.forEach(entrada => {
+
+                    if (entrada.isIntersecting) {
+
+                        entrada.target.style.opacity = "1";
+
+                        entrada.target.style.transform =
+                            "translateY(0)";
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.15
+            }
+        );
+
+
+    elementos.forEach(elemento => {
+
+        elemento.style.opacity = "0";
+
+        elemento.style.transform =
+            "translateY(30px)";
+
+        elemento.style.transition =
+            "opacity .7s ease, transform .7s ease";
+
+        observador.observe(elemento);
+
+    });
+
+
+</script>
 
 </body>
 </html>
