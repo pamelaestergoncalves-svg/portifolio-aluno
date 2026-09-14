@@ -4,16 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Explora Brasil | Guia Turístico</title>
-
-<meta name="description"
-content="Explora Brasil - seu guia turístico para conhecer os estados, destinos, culturas e belezas do Brasil.">
+<title>Explora Brasil 🇧🇷 | Guia Turístico</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
-rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -21,20 +17,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <style>
 
 /* =====================================================
-   CONFIGURAÇÕES
+   RESET
 ===================================================== */
-
-:root{
-    --verde:#006b3c;
-    --verde2:#004d2c;
-    --amarelo:#ffd700;
-    --azul:#0086c9;
-    --branco:#ffffff;
-    --claro:#f5f8f4;
-    --cinza:#666;
-    --escuro:#111;
-    --sombra:0 10px 30px rgba(0,0,0,.12);
-}
 
 *{
     margin:0;
@@ -43,15 +27,24 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     scroll-behavior:smooth;
 }
 
-body{
-    font-family:'Montserrat',sans-serif;
-    background:var(--claro);
-    color:#222;
+:root{
+    --verde:#006b3c;
+    --verde-escuro:#003b25;
+    --verde-claro:#e8f5ed;
+    --amarelo:#ffd700;
+    --azul:#0086c9;
+    --azul-escuro:#005a8d;
+    --branco:#fff;
+    --cinza:#666;
+    --cinza-claro:#f4f7f5;
+    --preto:#111;
+    --sombra:0 12px 35px rgba(0,0,0,.12);
 }
 
-img{
-    width:100%;
-    display:block;
+body{
+    font-family:'Montserrat',sans-serif;
+    background:var(--cinza-claro);
+    color:#222;
 }
 
 a{
@@ -74,17 +67,12 @@ header{
     left:0;
     width:100%;
     height:78px;
-
-    background:rgba(0,77,44,.96);
-
+    background:rgba(0,59,37,.97);
     display:flex;
-    align-items:center;
     justify-content:space-between;
-
+    align-items:center;
     padding:0 6%;
-
     z-index:9999;
-
     box-shadow:0 5px 25px rgba(0,0,0,.2);
 }
 
@@ -96,7 +84,7 @@ header{
 
 .logo i{
     color:var(--amarelo);
-    margin-right:7px;
+    margin-right:6px;
 }
 
 .logo span{
@@ -105,14 +93,13 @@ header{
 
 nav{
     display:flex;
-    align-items:center;
-    gap:22px;
+    gap:20px;
 }
 
 nav a{
     color:white;
     font-size:13px;
-    font-weight:600;
+    font-weight:700;
     transition:.3s;
 }
 
@@ -123,7 +110,7 @@ nav a:hover{
 .menu-btn{
     display:none;
     color:white;
-    font-size:26px;
+    font-size:27px;
     cursor:pointer;
 }
 
@@ -134,19 +121,16 @@ nav a:hover{
 
 .hero{
     min-height:100vh;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     text-align:center;
-
-    padding:130px 20px 80px;
+    padding:130px 20px 90px;
 
     background:
     linear-gradient(
-        rgba(0,65,38,.55),
-        rgba(0,0,0,.5)
+        rgba(0,65,38,.62),
+        rgba(0,0,0,.55)
     ),
     url("https://images.unsplash.com/photo-1483729558449-99ef09a8c325")
     center/cover;
@@ -164,12 +148,9 @@ nav a:hover{
 
 .hero h1{
     font-family:'Playfair Display',serif;
-
     font-size:clamp(55px,9vw,105px);
-
-    margin:15px 0;
-
     line-height:1;
+    margin:20px 0;
 }
 
 .hero h1 span{
@@ -177,12 +158,9 @@ nav a:hover{
 }
 
 .hero p{
-    max-width:750px;
-
+    max-width:760px;
     margin:auto;
-
     font-size:18px;
-
     line-height:1.8;
 }
 
@@ -192,15 +170,10 @@ nav a:hover{
 
 .btn{
     display:inline-block;
-
     padding:15px 30px;
-
     border-radius:40px;
-
-    font-weight:700;
-
+    font-weight:800;
     margin:5px;
-
     transition:.3s;
 }
 
@@ -230,28 +203,19 @@ nav a:hover{
 
 .search-container{
     width:88%;
-    max-width:1050px;
-
+    max-width:1100px;
     margin:-55px auto 0;
-
     position:relative;
-
     z-index:20;
-
     background:white;
-
     padding:30px;
-
     border-radius:22px;
-
     box-shadow:var(--sombra);
 }
 
 .search-container h2{
-    text-align:center;
-
     color:var(--verde);
-
+    text-align:center;
     margin-bottom:20px;
 }
 
@@ -262,15 +226,10 @@ nav a:hover{
 
 .search-box input{
     flex:1;
-
     padding:17px 20px;
-
     border:2px solid #ddd;
-
     border-radius:12px;
-
     outline:none;
-
     font-size:16px;
 }
 
@@ -279,19 +238,13 @@ nav a:hover{
 }
 
 .search-box button{
-    border:0;
-
+    border:none;
     background:var(--verde);
-
     color:white;
-
     padding:0 30px;
-
     border-radius:12px;
-
     cursor:pointer;
-
-    font-weight:700;
+    font-weight:800;
 }
 
 
@@ -301,25 +254,19 @@ nav a:hover{
 
 .section-title{
     text-align:center;
-
     margin-bottom:50px;
 }
 
 .section-title span{
     color:var(--verde);
-
     font-size:13px;
-
     font-weight:800;
-
     letter-spacing:3px;
 }
 
 .section-title h2{
     font-family:'Playfair Display',serif;
-
-    font-size:45px;
-
+    font-size:44px;
     margin-top:10px;
 }
 
@@ -329,36 +276,27 @@ nav a:hover{
 ===================================================== */
 
 .stats{
-    padding:80px 7%;
-
+    padding:85px 7%;
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(180px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
     gap:20px;
-
     background:white;
 }
 
 .stat{
     text-align:center;
-
     padding:20px;
 }
 
 .stat i{
-    font-size:38px;
-
     color:var(--verde);
-
+    font-size:38px;
     margin-bottom:12px;
 }
 
 .stat h3{
-    font-size:32px;
-
     color:var(--verde);
+    font-size:32px;
 }
 
 .stat p{
@@ -376,86 +314,61 @@ nav a:hover{
 
 .filtros{
     display:flex;
-
-    flex-wrap:wrap;
-
     justify-content:center;
-
+    flex-wrap:wrap;
     gap:10px;
-
     margin-bottom:40px;
 }
 
 .filtros button{
     border:2px solid var(--verde);
-
     background:white;
-
     color:var(--verde);
-
     padding:11px 20px;
-
     border-radius:30px;
-
     cursor:pointer;
-
     font-weight:700;
-
     transition:.3s;
 }
 
 .filtros button:hover,
 .filtros button.active{
     background:var(--verde);
-
     color:white;
 }
 
 .estado-grid{
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(240px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
     gap:20px;
 }
 
 .estado{
     background:white;
-
     border-radius:18px;
-
     overflow:hidden;
-
     box-shadow:var(--sombra);
-
     transition:.4s;
-
-    cursor:pointer;
 }
 
 .estado:hover{
     transform:translateY(-8px);
-
-    box-shadow:0 15px 35px rgba(0,0,0,.18);
 }
 
 .estado-img{
-    height:170px;
-
+    height:175px;
     overflow:hidden;
 }
 
 .estado-img img{
+    width:100%;
     height:100%;
-
     object-fit:cover;
-
     transition:.5s;
 }
 
-.estado:hover .estado-img img{
-    transform:scale(1.1);
+.estado:hover img{
+    transform:scale(1.08);
 }
 
 .estado-info{
@@ -464,36 +377,24 @@ nav a:hover{
 
 .estado-info h3{
     color:var(--verde);
-
-    font-size:20px;
-
-    margin-bottom:7px;
+    margin-bottom:8px;
 }
 
 .estado-info p{
-    color:var(--cinza);
-
+    color:#555;
     font-size:13px;
-
     line-height:1.6;
 }
 
 .regiao-tag{
     display:inline-block;
-
     margin-top:12px;
-
-    background:#e9f4ed;
-
-    color:var(--verde);
-
-    padding:6px 10px;
-
+    padding:6px 11px;
     border-radius:20px;
-
+    background:var(--verde-claro);
+    color:var(--verde);
     font-size:11px;
-
-    font-weight:700;
+    font-weight:800;
 }
 
 
@@ -503,36 +404,27 @@ nav a:hover{
 
 .destinos{
     padding:110px 7%;
-
-    background:#eef4ee;
+    background:#eaf3ed;
 }
 
 .destino-grid{
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(260px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:25px;
 }
 
 .destino{
     height:390px;
-
     position:relative;
-
-    border-radius:22px;
-
     overflow:hidden;
-
+    border-radius:22px;
     box-shadow:var(--sombra);
 }
 
 .destino img{
+    width:100%;
     height:100%;
-
     object-fit:cover;
-
     transition:.6s;
 }
 
@@ -542,30 +434,57 @@ nav a:hover{
 
 .destino-content{
     position:absolute;
-
     bottom:0;
-
     width:100%;
-
-    padding:35px 22px 22px;
-
+    padding:50px 22px 22px;
     color:white;
-
-    background:
-    linear-gradient(
-        transparent,
-        rgba(0,0,0,.9)
-    );
+    background:linear-gradient(transparent,rgba(0,0,0,.9));
 }
 
 .destino-content h3{
     font-size:25px;
-
-    margin-bottom:5px;
 }
 
-.destino-content p{
-    font-size:13px;
+
+/* =====================================================
+   VÍDEO
+===================================================== */
+
+.video-section{
+    padding:110px 7%;
+    background:white;
+}
+
+.video-container{
+    max-width:1000px;
+    margin:auto;
+    position:relative;
+    overflow:hidden;
+    border-radius:25px;
+    box-shadow:0 20px 50px rgba(0,0,0,.2);
+    background:#000;
+}
+
+.video-container video{
+    width:100%;
+    display:block;
+    min-height:450px;
+    object-fit:cover;
+}
+
+.video-info{
+    text-align:center;
+    margin-top:25px;
+}
+
+.video-info h3{
+    color:var(--verde);
+    font-size:25px;
+    margin-bottom:10px;
+}
+
+.video-info p{
+    color:#666;
 }
 
 
@@ -574,10 +493,8 @@ nav a:hover{
 ===================================================== */
 
 .regioes{
-    padding:100px 7%;
-
+    padding:105px 7%;
     background:var(--verde);
-
     color:white;
 }
 
@@ -591,36 +508,26 @@ nav a:hover{
 
 .regiao-grid{
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(180px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
     gap:20px;
 }
 
 .regiao{
     padding:35px 20px;
-
-    background:rgba(255,255,255,.1);
-
+    background:rgba(255,255,255,.12);
     border-radius:18px;
-
     text-align:center;
-
     transition:.3s;
 }
 
 .regiao:hover{
     background:var(--amarelo);
-
     color:#222;
-
     transform:translateY(-8px);
 }
 
 .regiao i{
     font-size:38px;
-
     margin-bottom:15px;
 }
 
@@ -635,24 +542,16 @@ nav a:hover{
 
 .experiencia-grid{
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(230px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
     gap:25px;
 }
 
 .experiencia{
     background:white;
-
     padding:35px;
-
     border-radius:20px;
-
     text-align:center;
-
     box-shadow:var(--sombra);
-
     transition:.3s;
 }
 
@@ -661,10 +560,8 @@ nav a:hover{
 }
 
 .experiencia i{
-    font-size:45px;
-
     color:var(--verde);
-
+    font-size:45px;
     margin-bottom:20px;
 }
 
@@ -673,8 +570,7 @@ nav a:hover{
 }
 
 .experiencia p{
-    color:var(--cinza);
-
+    color:#666;
     line-height:1.7;
 }
 
@@ -685,28 +581,20 @@ nav a:hover{
 
 .gastronomia{
     padding:110px 7%;
-
-    background:#fff;
+    background:white;
 }
 
 .comidas{
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(230px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
     gap:25px;
 }
 
 .comida{
-    border-radius:20px;
-
     overflow:hidden;
-
-    background:#fff;
-
+    border-radius:20px;
+    background:white;
     box-shadow:var(--sombra);
-
     transition:.3s;
 }
 
@@ -716,7 +604,6 @@ nav a:hover{
 
 .comida img{
     height:210px;
-
     object-fit:cover;
 }
 
@@ -726,16 +613,13 @@ nav a:hover{
 
 .comida-info h3{
     color:var(--verde);
-
     margin-bottom:8px;
 }
 
 .comida-info p{
-    color:var(--cinza);
-
-    font-size:14px;
-
+    color:#666;
     line-height:1.6;
+    font-size:14px;
 }
 
 
@@ -745,42 +629,30 @@ nav a:hover{
 
 .roteiros{
     padding:110px 7%;
-
     background:#f1f5f1;
 }
 
 .roteiro-grid{
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(270px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
     gap:25px;
 }
 
 .roteiro{
     background:white;
-
-    border-radius:20px;
-
     padding:30px;
-
+    border-radius:20px;
     box-shadow:var(--sombra);
-
-    border-left:5px solid var(--amarelo);
+    border-left:6px solid var(--amarelo);
 }
 
 .roteiro h3{
     color:var(--verde);
-
     margin-bottom:10px;
 }
 
-.roteiro .dias{
+.dias{
     color:#999;
-
-    font-size:13px;
-
     margin-bottom:15px;
 }
 
@@ -789,16 +661,13 @@ nav a:hover{
 }
 
 .roteiro li{
-    padding:8px 0;
-
+    padding:9px 0;
     border-bottom:1px solid #eee;
-
     font-size:14px;
 }
 
 .roteiro li i{
     color:var(--verde);
-
     margin-right:8px;
 }
 
@@ -809,67 +678,62 @@ nav a:hover{
 
 .cultura{
     padding:110px 7%;
+    background:white;
 }
 
 .cultura-container{
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
     gap:60px;
-
     align-items:center;
 }
 
-.cultura img{
+.cultura-container img{
+    width:100%;
     height:460px;
-
     object-fit:cover;
-
     border-radius:25px;
-
     box-shadow:var(--sombra);
 }
 
 .cultura-text h2{
     font-family:'Playfair Display',serif;
-
-    font-size:45px;
-
     color:var(--verde);
-
+    font-size:45px;
     margin-bottom:20px;
 }
 
 .cultura-text p{
     color:#555;
-
     line-height:1.9;
-
     margin-bottom:20px;
 }
 
 .check{
     margin:13px 0;
-
     font-weight:600;
 }
 
 .check i{
     color:var(--verde);
-
     margin-right:10px;
 }
 
 
 /* =====================================================
-   DICAS
+   DICAS — CORRIGIDO
 ===================================================== */
 
 .dicas{
-    padding:100px 7%;
+    padding:110px 7%;
 
-    background:var(--verde-escuro);
+    /* Fundo mais claro para melhorar a leitura */
+    background:
+    linear-gradient(
+        135deg,
+        #003b25,
+        #006b3c
+    );
 
     color:white;
 }
@@ -884,39 +748,45 @@ nav a:hover{
 
 .dicas-grid{
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
-
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:22px;
 }
 
 .dica{
-    background:rgba(255,255,255,.1);
+    background:white;
+    color:#222;
 
     padding:30px;
 
-    border-radius:18px;
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.18);
+
+    transition:.35s;
+
+    min-height:220px;
+}
+
+.dica:hover{
+    transform:translateY(-8px);
 }
 
 .dica i{
-    color:var(--amarelo);
-
-    font-size:35px;
-
+    color:var(--verde);
+    font-size:36px;
     margin-bottom:18px;
 }
 
 .dica h3{
-    margin-bottom:10px;
+    color:var(--verde-escuro);
+    font-size:20px;
+    margin-bottom:12px;
 }
 
 .dica p{
-    color:#ddd;
-
-    line-height:1.7;
-
+    color:#555;
     font-size:14px;
+    line-height:1.8;
 }
 
 
@@ -930,26 +800,20 @@ nav a:hover{
 
 .galeria-grid{
     display:grid;
-
-    grid-template-columns:
-    repeat(4,1fr);
-
+    grid-template-columns:repeat(4,1fr);
     gap:12px;
 }
 
 .galeria-item{
     height:230px;
-
     overflow:hidden;
-
     border-radius:15px;
 }
 
 .galeria-item img{
+    width:100%;
     height:100%;
-
     object-fit:cover;
-
     transition:.5s;
 }
 
@@ -959,9 +823,7 @@ nav a:hover{
 
 .galeria-item.grande{
     grid-column:span 2;
-
     grid-row:span 2;
-
     height:472px;
 }
 
@@ -972,48 +834,36 @@ nav a:hover{
 
 .avaliacoes{
     padding:110px 7%;
-
-    background:#f0f5ef;
+    background:#eef5ef;
 }
 
 .avaliacoes-grid{
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(260px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:25px;
 }
 
 .avaliacao{
     background:white;
-
     padding:30px;
-
     border-radius:20px;
-
     box-shadow:var(--sombra);
 }
 
 .estrelas{
     color:#ffc400;
-
     font-size:20px;
-
     margin-bottom:15px;
 }
 
 .avaliacao p{
     color:#555;
-
     line-height:1.8;
 }
 
 .usuario{
     color:var(--verde);
-
-    font-weight:700;
-
+    font-weight:800;
     margin-top:18px;
 }
 
@@ -1024,9 +874,7 @@ nav a:hover{
 
 .newsletter{
     padding:90px 7%;
-
     text-align:center;
-
     color:white;
 
     background:
@@ -1039,7 +887,6 @@ nav a:hover{
 
 .newsletter h2{
     font-family:'Playfair Display',serif;
-
     font-size:42px;
 }
 
@@ -1049,38 +896,26 @@ nav a:hover{
 
 .newsletter-form{
     max-width:600px;
-
     margin:auto;
-
     display:flex;
-
     gap:10px;
 }
 
 .newsletter-form input{
     flex:1;
-
     border:0;
-
     padding:17px;
-
     border-radius:10px;
-
     outline:none;
 }
 
 .newsletter-form button{
     border:0;
-
     padding:0 25px;
-
     background:var(--amarelo);
-
     border-radius:10px;
-
     cursor:pointer;
-
-    font-weight:700;
+    font-weight:800;
 }
 
 
@@ -1090,32 +925,24 @@ nav a:hover{
 
 footer{
     background:#002d1a;
-
     color:white;
-
     padding:70px 7% 25px;
 }
 
 .footer-grid{
     display:grid;
-
-    grid-template-columns:
-    2fr 1fr 1fr 1fr;
-
+    grid-template-columns:2fr 1fr 1fr 1fr;
     gap:40px;
-
     margin-bottom:50px;
 }
 
 footer h3{
     color:var(--amarelo);
-
     margin-bottom:18px;
 }
 
 footer p{
-    color:#ccc;
-
+    color:#ddd;
     line-height:1.8;
 }
 
@@ -1128,9 +955,7 @@ footer li{
 }
 
 footer a{
-    color:#ccc;
-
-    transition:.3s;
+    color:#ddd;
 }
 
 footer a:hover{
@@ -1139,62 +964,107 @@ footer a:hover{
 
 .social{
     display:flex;
-
     gap:12px;
-
     margin-top:20px;
 }
 
 .social a{
     width:42px;
-
     height:42px;
-
     display:flex;
-
-    align-items:center;
-
     justify-content:center;
-
+    align-items:center;
     background:rgba(255,255,255,.1);
-
     border-radius:50%;
 }
 
 .copyright{
     border-top:1px solid rgba(255,255,255,.15);
-
     padding-top:25px;
-
     text-align:center;
-
     color:#aaa;
 }
 
 
 /* =====================================================
-   TOPO
+   WHATSAPP
+===================================================== */
+
+.whatsapp{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+
+    width:62px;
+    height:62px;
+
+    background:#25D366;
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    font-size:32px;
+
+    z-index:9998;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.25);
+
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+}
+
+.whatsapp-tooltip{
+    position:absolute;
+    right:75px;
+
+    background:#222;
+    color:white;
+
+    padding:9px 13px;
+
+    border-radius:8px;
+
+    font-size:12px;
+
+    white-space:nowrap;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.3s;
+}
+
+.whatsapp:hover .whatsapp-tooltip{
+    opacity:1;
+}
+
+
+/* =====================================================
+   BOTÃO TOPO
 ===================================================== */
 
 #topo{
     position:fixed;
-
     right:25px;
-
-    bottom:25px;
+    bottom:100px;
 
     width:50px;
-
     height:50px;
 
     display:flex;
-
+    justify-content:center;
     align-items:center;
 
-    justify-content:center;
-
     background:var(--amarelo);
-
     color:#222;
 
     border-radius:50%;
@@ -1202,57 +1072,39 @@ footer a:hover{
     z-index:999;
 
     box-shadow:var(--sombra);
-
-    transition:.3s;
-}
-
-#topo:hover{
-    transform:translateY(-5px);
 }
 
 
 /* =====================================================
-   ANIMAÇÃO
+   ANIMAÇÕES
 ===================================================== */
 
 .animar{
     opacity:0;
-
-    transform:translateY(35px);
-
+    transform:translateY(30px);
     transition:.8s;
 }
 
 .animar.visivel{
     opacity:1;
-
     transform:translateY(0);
 }
 
 
 /* =====================================================
-   RESPONSIVIDADE
+   RESPONSIVO
 ===================================================== */
 
 @media(max-width:1000px){
 
     nav{
         position:absolute;
-
         top:78px;
-
         right:-100%;
-
         width:280px;
-
         padding:25px;
-
         background:var(--verde-escuro);
-
         flex-direction:column;
-
-        align-items:flex-start;
-
         transition:.4s;
     }
 
@@ -1275,7 +1127,6 @@ footer a:hover{
     .galeria-grid{
         grid-template-columns:1fr 1fr;
     }
-
 }
 
 @media(max-width:600px){
@@ -1297,7 +1148,7 @@ footer a:hover{
     }
 
     .section-title h2{
-        font-size:35px;
+        font-size:34px;
     }
 
     .cultura-text h2{
@@ -1330,27 +1181,34 @@ footer a:hover{
         height:230px;
     }
 
+    .video-container video{
+        min-height:250px;
+    }
+
+    .whatsapp{
+        width:56px;
+        height:56px;
+        right:18px;
+        bottom:18px;
+    }
+
 }
 
 </style>
 </head>
 
-
 <body>
 
 
 <!-- =====================================================
-     HEADER
+     MENU
 ===================================================== -->
 
 <header>
 
 <a href="#inicio" class="logo">
-
 <i class="fa-solid fa-compass"></i>
-
 Explora <span>Brasil</span>
-
 </a>
 
 <nav id="menu">
@@ -1358,6 +1216,7 @@ Explora <span>Brasil</span>
 <a href="#inicio">Início</a>
 <a href="#estados">Estados</a>
 <a href="#destinos">Destinos</a>
+<a href="#video">Vídeo</a>
 <a href="#regioes">Regiões</a>
 <a href="#experiencias">Experiências</a>
 <a href="#cultura">Cultura</a>
@@ -1367,9 +1226,7 @@ Explora <span>Brasil</span>
 </nav>
 
 <div class="menu-btn" onclick="abrirMenu()">
-
 <i class="fa-solid fa-bars"></i>
-
 </div>
 
 </header>
@@ -1383,17 +1240,16 @@ Explora <span>Brasil</span>
 
 <div class="hero-content">
 
-<small>SEU GUIA TURÍSTICO PELO BRASIL</small>
+<small>GUIA TURÍSTICO DO BRASIL</small>
 
 <h1>
-Explore o
-<span>Brasil</span>
+Explore o <span>Brasil</span>
 </h1>
 
 <p>
-Descubra praias paradisíacas, cidades históricas,
-paisagens incríveis, culturas diferentes e sabores
-que fazem do Brasil um dos países mais diversos do mundo.
+Descubra praias paradisíacas, montanhas, florestas,
+cidades históricas, culturas, sabores e experiências
+inesquecíveis de Norte a Sul.
 </p>
 
 <div class="buttons">
@@ -1403,8 +1259,9 @@ que fazem do Brasil um dos países mais diversos do mundo.
 Explorar estados
 </a>
 
-<a href="#destinos" class="btn btn-secondary">
-Ver destinos
+<a href="#video" class="btn btn-secondary">
+<i class="fa-solid fa-play"></i>
+Assistir vídeo
 </a>
 
 </div>
@@ -1422,7 +1279,7 @@ Ver destinos
 
 <h2>
 <i class="fa-solid fa-magnifying-glass"></i>
-Qual lugar você quer conhecer?
+Encontre seu próximo destino
 </h2>
 
 <div class="search-box">
@@ -1430,11 +1287,11 @@ Qual lugar você quer conhecer?
 <input
 type="text"
 id="pesquisa"
-placeholder="Digite um estado, cidade ou destino..."
+placeholder="Digite um estado ou destino..."
 >
 
 <button onclick="buscar()">
-Buscar
+Pesquisar
 </button>
 
 </div>
@@ -1449,43 +1306,27 @@ Buscar
 <section class="stats">
 
 <div class="stat">
-
 <i class="fa-solid fa-map-location-dot"></i>
-
-<h3>26</h3>
-
-<p>Estados</p>
-
+<h3>27</h3>
+<p>Unidades federativas</p>
 </div>
 
 <div class="stat">
-
-<i class="fa-solid fa-landmark"></i>
-
-<h3>5</h3>
-
-<p>Regiões</p>
-
-</div>
-
-<div class="stat">
-
-<i class="fa-solid fa-tree"></i>
-
-<h3>∞</h3>
-
-<p>Lugares para explorar</p>
-
-</div>
-
-<div class="stat">
-
 <i class="fa-solid fa-earth-americas"></i>
+<h3>5</h3>
+<p>Regiões brasileiras</p>
+</div>
 
-<h3>1</h3>
+<div class="stat">
+<i class="fa-solid fa-water"></i>
+<h3>8.000+</h3>
+<p>km de litoral</p>
+</div>
 
-<p>Brasil</p>
-
+<div class="stat">
+<i class="fa-solid fa-heart"></i>
+<h3>∞</h3>
+<p>Lugares para descobrir</p>
 </div>
 
 </section>
@@ -1499,12 +1340,11 @@ Buscar
 
 <div class="section-title">
 
-<span>DESCUBRA O PAÍS</span>
+<span>DESCUBRA</span>
 
-<h2>26 estados + Distrito Federal</h2>
+<h2>Todos os estados do Brasil</h2>
 
 </div>
-
 
 <div class="filtros">
 
@@ -1541,552 +1381,313 @@ Sul
 <!-- NORTE -->
 
 <div class="estado animar" data-regiao="norte">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5"
-alt="Amazonas">
+<img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5">
 </div>
-
 <div class="estado-info">
-
 <h3>Amazonas</h3>
-
 <p>Floresta Amazônica, rios e biodiversidade.</p>
-
 <span class="regiao-tag">Norte</span>
-
 </div>
-
 </div>
-
 
 <div class="estado animar" data-regiao="norte">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1511497584788-876760111969"
-alt="Acre">
+<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
 </div>
-
 <div class="estado-info">
-
 <h3>Acre</h3>
-
-<p>Natureza, florestas e cultura amazônica.</p>
-
+<p>Florestas e cultura amazônica.</p>
 <span class="regiao-tag">Norte</span>
-
 </div>
-
 </div>
-
 
 <div class="estado animar" data-regiao="norte">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e"
-alt="Amapá">
+<img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
 </div>
-
 <div class="estado-info">
-
 <h3>Amapá</h3>
-
 <p>Natureza preservada e paisagens amazônicas.</p>
-
 <span class="regiao-tag">Norte</span>
-
 </div>
-
 </div>
-
 
 <div class="estado animar" data-regiao="norte">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b"
-alt="Pará">
+<img src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b">
 </div>
-
 <div class="estado-info">
-
 <h3>Pará</h3>
-
 <p>Belém, Alter do Chão e cultura paraense.</p>
-
 <span class="regiao-tag">Norte</span>
-
 </div>
-
 </div>
-
 
 <div class="estado animar" data-regiao="norte">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e"
-alt="Rondônia">
+<img src="https://images.unsplash.com/photo-1500534623283-312aade485b7">
 </div>
-
 <div class="estado-info">
-
 <h3>Rondônia</h3>
-
-<p>Rios, florestas e aventuras na Amazônia.</p>
-
+<p>Rios, florestas e aventuras.</p>
 <span class="regiao-tag">Norte</span>
-
 </div>
-
 </div>
-
 
 <div class="estado animar" data-regiao="norte">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1500534623283-312aade485b7"
-alt="Roraima">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
 </div>
-
 <div class="estado-info">
-
 <h3>Roraima</h3>
-
 <p>Monte Roraima e paisagens naturais.</p>
-
 <span class="regiao-tag">Norte</span>
-
 </div>
-
 </div>
-
 
 <div class="estado animar" data-regiao="norte">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
-alt="Tocantins">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
 </div>
-
 <div class="estado-info">
-
 <h3>Tocantins</h3>
-
 <p>Jalapão, cachoeiras e dunas.</p>
-
 <span class="regiao-tag">Norte</span>
-
 </div>
-
 </div>
 
 
 <!-- NORDESTE -->
 
 <div class="estado animar" data-regiao="nordeste">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1518638150340-f706e86654de"
-alt="Alagoas">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
 </div>
-
 <div class="estado-info">
-
 <h3>Alagoas</h3>
-
 <p>Maceió, piscinas naturais e praias.</p>
-
 <span class="regiao-tag">Nordeste</span>
-
 </div>
-
 </div>
-
 
 <div class="estado animar" data-regiao="nordeste">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1533104816931-20fa691ff6ca"
-alt="Bahia">
+<img src="https://images.unsplash.com/photo-1533104816931-20fa691ff6ca">
 </div>
-
 <div class="estado-info">
-
 <h3>Bahia</h3>
-
 <p>Salvador, praias, história e cultura.</p>
-
 <span class="regiao-tag">Nordeste</span>
-
 </div>
-
 </div>
-
 
 <div class="estado animar" data-regiao="nordeste">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1470214304380-aadaedcfff1b"
-alt="Ceará">
+<img src="https://images.unsplash.com/photo-1470214304380-aadaedcfff1b">
 </div>
-
 <div class="estado-info">
-
 <h3>Ceará</h3>
-
 <p>Fortaleza, Jericoacoara e dunas.</p>
-
 <span class="regiao-tag">Nordeste</span>
-
 </div>
-
 </div>
-
 
 <div class="estado animar" data-regiao="nordeste">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
-alt="Maranhão">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
 </div>
-
 <div class="estado-info">
-
 <h3>Maranhão</h3>
-
 <p>Lençóis Maranhenses e paisagens únicas.</p>
-
 <span class="regiao-tag">Nordeste</span>
-
 </div>
-
 </div>
-
 
 <div class="estado animar" data-regiao="nordeste">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
-alt="Paraíba">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
 </div>
-
 <div class="estado-info">
-
 <h3>Paraíba</h3>
-
 <p>João Pessoa, praias e história.</p>
-
 <span class="regiao-tag">Nordeste</span>
-
 </div>
-
 </div>
-
 
 <div class="estado animar" data-regiao="nordeste">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
-alt="Pernambuco">
+<img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0">
 </div>
-
 <div class="estado-info">
-
 <h3>Pernambuco</h3>
-
-<p>Recife, Olinda, Porto de Galinhas e Fernando de Noronha.</p>
-
+<p>Recife, Olinda e Porto de Galinhas.</p>
 <span class="regiao-tag">Nordeste</span>
-
 </div>
-
 </div>
-
 
 <div class="estado animar" data-regiao="nordeste">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1500534623283-312aade485b7"
-alt="Piauí">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
 </div>
-
 <div class="estado-info">
-
 <h3>Piauí</h3>
-
-<p>Parque Nacional da Serra da Capivara.</p>
-
+<p>Serra da Capivara e natureza.</p>
 <span class="regiao-tag">Nordeste</span>
-
 </div>
-
 </div>
-
 
 <div class="estado animar" data-regiao="nordeste">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
-alt="Rio Grande do Norte">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
 </div>
-
 <div class="estado-info">
-
 <h3>Rio Grande do Norte</h3>
-
 <p>Natal, dunas e praias incríveis.</p>
-
 <span class="regiao-tag">Nordeste</span>
-
 </div>
-
 </div>
-
 
 <div class="estado animar" data-regiao="nordeste">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0"
-alt="Sergipe">
+<img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0">
 </div>
-
 <div class="estado-info">
-
 <h3>Sergipe</h3>
-
 <p>Aracaju, cânions e litoral.</p>
-
 <span class="regiao-tag">Nordeste</span>
-
 </div>
-
 </div>
 
 
 <!-- CENTRO-OESTE -->
 
 <div class="estado animar" data-regiao="centro">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
-alt="Goiás">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
 </div>
-
 <div class="estado-info">
-
 <h3>Goiás</h3>
-
 <p>Chapada dos Veadeiros e cidades históricas.</p>
-
 <span class="regiao-tag">Centro-Oeste</span>
-
 </div>
-
 </div>
-
 
 <div class="estado animar" data-regiao="centro">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e"
-alt="Mato Grosso">
+<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
 </div>
-
 <div class="estado-info">
-
 <h3>Mato Grosso</h3>
-
-<p>Pantanal, Chapada dos Guimarães e natureza.</p>
-
+<p>Pantanal e Chapada dos Guimarães.</p>
 <span class="regiao-tag">Centro-Oeste</span>
-
 </div>
-
 </div>
-
 
 <div class="estado animar" data-regiao="centro">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b"
-alt="Mato Grosso do Sul">
+<img src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b">
 </div>
-
 <div class="estado-info">
-
 <h3>Mato Grosso do Sul</h3>
-
 <p>Bonito, rios cristalinos e Pantanal.</p>
-
 <span class="regiao-tag">Centro-Oeste</span>
-
 </div>
-
 </div>
-
 
 <div class="estado animar" data-regiao="centro">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1500534623283-312aade485b7"
-alt="Distrito Federal">
+<img src="https://images.unsplash.com/photo-1500534623283-312aade485b7">
 </div>
-
 <div class="estado-info">
-
 <h3>Distrito Federal</h3>
-
 <p>Brasília, arquitetura e história.</p>
-
 <span class="regiao-tag">Centro-Oeste</span>
-
 </div>
-
 </div>
 
 
 <!-- SUDESTE -->
 
 <div class="estado animar" data-regiao="sudeste">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325"
-alt="Espírito Santo">
+<img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325">
 </div>
-
 <div class="estado-info">
-
 <h3>Espírito Santo</h3>
-
 <p>Vitória, praias e montanhas.</p>
-
 <span class="regiao-tag">Sudeste</span>
-
 </div>
-
 </div>
-
 
 <div class="estado animar" data-regiao="sudeste">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
-alt="Minas Gerais">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
 </div>
-
 <div class="estado-info">
-
 <h3>Minas Gerais</h3>
-
-<p>Ouro Preto, Inhotim, montanhas e gastronomia.</p>
-
+<p>Ouro Preto, montanhas e gastronomia.</p>
 <span class="regiao-tag">Sudeste</span>
-
 </div>
-
 </div>
-
 
 <div class="estado animar" data-regiao="sudeste">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325"
-alt="Rio de Janeiro">
+<img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325">
 </div>
-
 <div class="estado-info">
-
 <h3>Rio de Janeiro</h3>
-
 <p>Praias, montanhas e o Cristo Redentor.</p>
-
 <span class="regiao-tag">Sudeste</span>
-
 </div>
-
 </div>
-
 
 <div class="estado animar" data-regiao="sudeste">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1522083165195-3424ed129620"
-alt="São Paulo">
+<img src="https://images.unsplash.com/photo-1522083165195-3424ed129620">
 </div>
-
 <div class="estado-info">
-
 <h3>São Paulo</h3>
-
-<p>Cultura, gastronomia, museus e grandes cidades.</p>
-
+<p>Cultura, gastronomia, museus e cidades.</p>
 <span class="regiao-tag">Sudeste</span>
-
 </div>
-
 </div>
 
 
 <!-- SUL -->
 
 <div class="estado animar" data-regiao="sul">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b"
-alt="Paraná">
+<img src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b">
 </div>
-
 <div class="estado-info">
-
 <h3>Paraná</h3>
-
 <p>Foz do Iguaçu, Curitiba e natureza.</p>
-
 <span class="regiao-tag">Sul</span>
-
 </div>
-
 </div>
-
 
 <div class="estado animar" data-regiao="sul">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
-alt="Santa Catarina">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
 </div>
-
 <div class="estado-info">
-
 <h3>Santa Catarina</h3>
-
 <p>Praias, serra e cidades encantadoras.</p>
-
 <span class="regiao-tag">Sul</span>
-
 </div>
-
 </div>
-
 
 <div class="estado animar" data-regiao="sul">
-
 <div class="estado-img">
-<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
-alt="Rio Grande do Sul">
+<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b">
 </div>
-
 <div class="estado-info">
-
 <h3>Rio Grande do Sul</h3>
-
-<p>Serra Gaúcha, Gramado e cultura gaúcha.</p>
-
+<p>Serra Gaúcha e cultura gaúcha.</p>
 <span class="regiao-tag">Sul</span>
-
 </div>
-
 </div>
-
 
 </div>
 
@@ -2101,79 +1702,92 @@ alt="Rio Grande do Sul">
 
 <div class="section-title">
 
-<span>DESTINOS IMPERDÍVEIS</span>
+<span>DESTINOS INCRÍVEIS</span>
 
-<h2>Lugares que você precisa conhecer</h2>
+<h2>Lugares para colocar na sua lista</h2>
 
 </div>
-
 
 <div class="destino-grid">
 
-
 <div class="destino">
-
-<img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325"
-alt="Rio de Janeiro">
-
+<img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325">
 <div class="destino-content">
-
 <h3>Rio de Janeiro</h3>
-
-<p>Praias, montanhas e paisagens inesquecíveis.</p>
-
+<p>Praias, montanhas e paisagens incríveis.</p>
 </div>
-
 </div>
-
 
 <div class="destino">
-
-<img src="https://images.unsplash.com/photo-1533104816931-20fa691ff6ca"
-alt="Fernando de Noronha">
-
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
 <div class="destino-content">
-
-<h3>Fernando de Noronha</h3>
-
-<p>Natureza preservada e águas cristalinas.</p>
-
+<h3>Praias brasileiras</h3>
+<p>Águas cristalinas e paisagens paradisíacas.</p>
 </div>
-
 </div>
-
 
 <div class="destino">
-
-<img src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b"
-alt="Foz do Iguaçu">
-
+<img src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b">
 <div class="destino-content">
-
 <h3>Foz do Iguaçu</h3>
-
-<p>Uma das maiores maravilhas naturais do Brasil.</p>
-
+<p>Natureza e uma das maiores quedas-d'água do mundo.</p>
 </div>
-
 </div>
-
 
 <div class="destino">
-
-<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
-alt="Chapada">
-
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
 <div class="destino-content">
-
 <h3>Chapadas</h3>
-
-<p>Trilhas, cachoeiras e paisagens incríveis.</p>
-
+<p>Trilhas, cachoeiras e montanhas.</p>
+</div>
 </div>
 
 </div>
 
+</section>
+
+
+<!-- =====================================================
+     VÍDEO
+===================================================== -->
+
+<section class="video-section" id="video">
+
+<div class="section-title">
+
+<span>INSPIRAÇÃO</span>
+
+<h2>Viaje pelo Brasil através das imagens</h2>
+
+</div>
+
+<div class="video-container">
+
+<!--
+    Para colocar seu próprio vídeo:
+    1. Crie uma pasta chamada "videos"
+    2. Coloque nela um arquivo chamado "viagem.mp4"
+    3. O vídeo será carregado automaticamente.
+-->
+
+<video controls poster="https://images.unsplash.com/photo-1483729558449-99ef09a8c325">
+
+<source src="videos/viagem.mp4" type="video/mp4">
+
+Seu navegador não suporta vídeos.
+
+</video>
+
+</div>
+
+<div class="video-info">
+
+<h3>🌎 O Brasil espera por você!</h3>
+
+<p>
+Prepare as malas, escolha seu destino e descubra
+as belezas do nosso país.
+</p>
 
 </div>
 
@@ -2190,61 +1804,40 @@ alt="Chapada">
 
 <span>DO NORTE AO SUL</span>
 
-<h2>Explore cada região</h2>
+<h2>Conheça as cinco regiões</h2>
 
 </div>
-
 
 <div class="regiao-grid">
 
 <div class="regiao">
-
 <i class="fa-solid fa-tree"></i>
-
 <h3>Norte</h3>
-
-<p>Amazônia e natureza.</p>
-
+<p>Amazônia e biodiversidade.</p>
 </div>
 
 <div class="regiao">
-
 <i class="fa-solid fa-umbrella-beach"></i>
-
 <h3>Nordeste</h3>
-
-<p>Praias e cultura.</p>
-
+<p>Praias, cultura e história.</p>
 </div>
 
 <div class="regiao">
-
 <i class="fa-solid fa-water"></i>
-
 <h3>Centro-Oeste</h3>
-
 <p>Pantanal e cerrado.</p>
-
 </div>
 
 <div class="regiao">
-
 <i class="fa-solid fa-city"></i>
-
 <h3>Sudeste</h3>
-
 <p>Grandes cidades e história.</p>
-
 </div>
 
 <div class="regiao">
-
 <i class="fa-solid fa-mountain-sun"></i>
-
 <h3>Sul</h3>
-
 <p>Serra, praias e tradição.</p>
-
 </div>
 
 </div>
@@ -2260,99 +1853,49 @@ alt="Chapada">
 
 <div class="section-title">
 
-<span>VIVA O BRASIL</span>
+<span>VIVA NOVAS EXPERIÊNCIAS</span>
 
-<h2>Experiências para todos os estilos</h2>
+<h2>Escolha seu estilo de viagem</h2>
 
 </div>
-
 
 <div class="experiencia-grid">
 
-
 <div class="experiencia">
-
 <i class="fa-solid fa-water"></i>
-
 <h3>Praias</h3>
-
-<p>
-Relaxe em praias incríveis espalhadas
-por todo o litoral brasileiro.
-</p>
-
+<p>Relaxe e conheça o litoral brasileiro.</p>
 </div>
 
-
 <div class="experiencia">
-
 <i class="fa-solid fa-person-hiking"></i>
-
 <h3>Aventura</h3>
-
-<p>
-Trilhas, cachoeiras, montanhas e
-experiências ao ar livre.
-</p>
-
+<p>Trilhas, cachoeiras e montanhas.</p>
 </div>
 
-
 <div class="experiencia">
-
 <i class="fa-solid fa-landmark"></i>
-
 <h3>História</h3>
-
-<p>
-Conheça cidades históricas, museus
-e patrimônios culturais.
-</p>
-
+<p>Conheça cidades e patrimônios históricos.</p>
 </div>
 
-
 <div class="experiencia">
-
 <i class="fa-solid fa-utensils"></i>
-
 <h3>Gastronomia</h3>
-
-<p>
-Descubra sabores e pratos tradicionais
-de diferentes regiões.
-</p>
-
+<p>Descubra os sabores de cada região.</p>
 </div>
 
-
 <div class="experiencia">
-
 <i class="fa-solid fa-music"></i>
-
 <h3>Cultura</h3>
-
-<p>
-Conheça festas, músicas, danças
-e tradições brasileiras.
-</p>
-
+<p>Festas, músicas, danças e tradições.</p>
 </div>
-
 
 <div class="experiencia">
-
 <i class="fa-solid fa-camera"></i>
-
 <h3>Fotografia</h3>
-
-<p>
-Encontre paisagens perfeitas para
-registrar suas viagens.
-</p>
-
+<p>Registre paisagens inesquecíveis.</p>
 </div>
-
 
 </div>
 
@@ -2369,93 +1912,43 @@ registrar suas viagens.
 
 <span>SABORES DO BRASIL</span>
 
-<h2>Uma viagem pela gastronomia</h2>
+<h2>Conheça nossa gastronomia</h2>
 
 </div>
-
 
 <div class="comidas">
 
-
 <div class="comida">
-
-<img
-src="https://images.unsplash.com/photo-1589302168068-964664d93dc0"
-alt="Feijoada">
-
+<img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0">
 <div class="comida-info">
-
 <h3>Feijoada</h3>
-
-<p>
-Um dos pratos mais conhecidos
-da culinária brasileira.
-</p>
-
+<p>Um dos pratos mais conhecidos da culinária brasileira.</p>
 </div>
-
 </div>
-
 
 <div class="comida">
-
-<img
-src="https://images.unsplash.com/photo-1601050690597-df0568f70950"
-alt="Comida brasileira">
-
+<img src="https://images.unsplash.com/photo-1601050690597-df0568f70950">
 <div class="comida-info">
-
 <h3>Acarajé</h3>
-
-<p>
-Um dos sabores mais tradicionais
-da Bahia.
-</p>
-
+<p>Um dos sabores tradicionais da culinária baiana.</p>
 </div>
-
 </div>
-
 
 <div class="comida">
-
-<img
-src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc"
-alt="Açaí">
-
+<img src="https://images.unsplash.com/photo-1579954115545-a95591f28fc">
 <div class="comida-info">
-
 <h3>Açaí</h3>
-
-<p>
-Muito popular especialmente
-na região Norte.
-</p>
-
+<p>Um alimento muito associado à região amazônica.</p>
 </div>
-
 </div>
-
 
 <div class="comida">
-
-<img
-src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38"
-alt="Pizza">
-
+<img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38">
 <div class="comida-info">
-
 <h3>Pizza</h3>
-
-<p>
-Um dos sabores muito presentes
-na gastronomia de São Paulo.
-</p>
-
+<p>Um dos pratos muito presentes na gastronomia paulista.</p>
 </div>
-
 </div>
-
 
 </div>
 
@@ -2470,15 +1963,13 @@ na gastronomia de São Paulo.
 
 <div class="section-title">
 
-<span>PLANEJE SUA AVENTURA</span>
+<span>PLANEJE</span>
 
-<h2>Roteiros de viagem</h2>
+<h2>Ideias de roteiros</h2>
 
 </div>
 
-
 <div class="roteiro-grid">
-
 
 <div class="roteiro">
 
@@ -2487,31 +1978,13 @@ na gastronomia de São Paulo.
 <div class="dias">7 dias</div>
 
 <ul>
-
-<li>
-<i class="fa-solid fa-check"></i>
-Salvador
-</li>
-
-<li>
-<i class="fa-solid fa-check"></i>
-Praias da Bahia
-</li>
-
-<li>
-<i class="fa-solid fa-check"></i>
-Recife
-</li>
-
-<li>
-<i class="fa-solid fa-check"></i>
-Porto de Galinhas
-</li>
-
+<li><i class="fa-solid fa-check"></i> Salvador</li>
+<li><i class="fa-solid fa-check"></i> Praias da Bahia</li>
+<li><i class="fa-solid fa-check"></i> Recife</li>
+<li><i class="fa-solid fa-check"></i> Porto de Galinhas</li>
 </ul>
 
 </div>
-
 
 <div class="roteiro">
 
@@ -2520,31 +1993,13 @@ Porto de Galinhas
 <div class="dias">5 dias</div>
 
 <ul>
-
-<li>
-<i class="fa-solid fa-check"></i>
-Bonito
-</li>
-
-<li>
-<i class="fa-solid fa-check"></i>
-Pantanal
-</li>
-
-<li>
-<i class="fa-solid fa-check"></i>
-Cachoeiras
-</li>
-
-<li>
-<i class="fa-solid fa-check"></i>
-Trilhas
-</li>
-
+<li><i class="fa-solid fa-check"></i> Bonito</li>
+<li><i class="fa-solid fa-check"></i> Pantanal</li>
+<li><i class="fa-solid fa-check"></i> Cachoeiras</li>
+<li><i class="fa-solid fa-check"></i> Trilhas</li>
 </ul>
 
 </div>
-
 
 <div class="roteiro">
 
@@ -2553,31 +2008,13 @@ Trilhas
 <div class="dias">6 dias</div>
 
 <ul>
-
-<li>
-<i class="fa-solid fa-check"></i>
-Curitiba
-</li>
-
-<li>
-<i class="fa-solid fa-check"></i>
-Foz do Iguaçu
-</li>
-
-<li>
-<i class="fa-solid fa-check"></i>
-Gramado
-</li>
-
-<li>
-<i class="fa-solid fa-check"></i>
-Serra Gaúcha
-</li>
-
+<li><i class="fa-solid fa-check"></i> Curitiba</li>
+<li><i class="fa-solid fa-check"></i> Foz do Iguaçu</li>
+<li><i class="fa-solid fa-check"></i> Gramado</li>
+<li><i class="fa-solid fa-check"></i> Serra Gaúcha</li>
 </ul>
 
 </div>
-
 
 </div>
 
@@ -2592,10 +2029,7 @@ Serra Gaúcha
 
 <div class="cultura-container">
 
-<img
-src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5"
-alt="Brasil">
-
+<img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5">
 
 <div class="cultura-text">
 
@@ -2605,8 +2039,8 @@ Um país de muitas culturas
 
 <p>
 O Brasil possui uma enorme diversidade cultural.
-Cada região possui seus próprios costumes,
-festas, comidas, músicas, sotaques e tradições.
+Cada região possui costumes, festas, comidas,
+músicas, sotaques e tradições diferentes.
 </p>
 
 <div class="check">
@@ -2644,99 +2078,91 @@ Gastronomia regional
 
 <div class="section-title">
 
-<span>ANTES DE VIAJAR</span>
+<span>VIAJE MELHOR</span>
 
-<h2>Dicas importantes</h2>
+<h2>Dicas para sua viagem</h2>
 
 </div>
 
-
 <div class="dicas-grid">
-
 
 <div class="dica">
 
 <i class="fa-solid fa-calendar-days"></i>
 
-<h3>Planeje</h3>
+<h3>Planeje com antecedência</h3>
 
 <p>
-Pesquise o destino, o clima,
-hospedagem e transporte.
+Pesquise o destino, o clima, os horários,
+os transportes e os lugares que deseja conhecer.
 </p>
 
 </div>
-
 
 <div class="dica">
 
 <i class="fa-solid fa-suitcase"></i>
 
-<h3>Prepare a mala</h3>
+<h3>Prepare sua mala</h3>
 
 <p>
-Leve itens adequados ao clima
-e às atividades da viagem.
+Escolha roupas e objetos de acordo com
+o clima e as atividades da viagem.
 </p>
 
 </div>
-
 
 <div class="dica">
 
 <i class="fa-solid fa-map-location-dot"></i>
 
-<h3>Conheça o local</h3>
+<h3>Pesquise o destino</h3>
 
 <p>
-Pesquise os lugares que deseja
-visitar antes de viajar.
+Conheça os pontos turísticos e organize
+um roteiro antes de sair.
 </p>
 
 </div>
-
 
 <div class="dica">
 
 <i class="fa-solid fa-leaf"></i>
 
-<h3>Preserve</h3>
+<h3>Preserve a natureza</h3>
 
 <p>
-Respeite a natureza e mantenha
-os destinos limpos.
+Não deixe lixo, respeite os animais
+e ajude a conservar os lugares visitados.
 </p>
 
 </div>
-
 
 <div class="dica">
 
 <i class="fa-solid fa-camera"></i>
 
-<h3>Registre</h3>
+<h3>Registre os momentos</h3>
 
 <p>
-Fotografe os momentos e
-guarde boas lembranças.
+Tire fotos, faça vídeos e guarde
+as lembranças da sua viagem.
 </p>
 
 </div>
-
 
 <div class="dica">
 
 <i class="fa-solid fa-heart"></i>
 
-<h3>Aproveite</h3>
+<h3>Aproveite a experiência</h3>
 
 <p>
-Conheça novas culturas e
-aproveite cada momento.
+Conheça novas culturas, experimente
+novos sabores e aproveite cada momento.
 </p>
 
 </div>
-
 
 </div>
 
@@ -2751,60 +2177,33 @@ aproveite cada momento.
 
 <div class="section-title">
 
-<span>BRASIL EM FOTOS</span>
+<span>GALERIA</span>
 
-<h2>Galeria de inspiração</h2>
+<h2>Brasil em imagens</h2>
 
 </div>
-
 
 <div class="galeria-grid">
 
-
 <div class="galeria-item grande">
-
-<img
-src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325"
-alt="Rio de Janeiro">
-
+<img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325">
 </div>
-
 
 <div class="galeria-item">
-
-<img
-src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
-alt="Praia">
-
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
 </div>
-
 
 <div class="galeria-item">
-
-<img
-src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b"
-alt="Natureza">
-
+<img src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b">
 </div>
-
 
 <div class="galeria-item">
-
-<img
-src="https://images.unsplash.com/photo-1469474968028-56623f02e42e"
-alt="Paisagem">
-
+<img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
 </div>
-
 
 <div class="galeria-item">
-
-<img
-src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
-alt="Montanhas">
-
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
 </div>
-
 
 </div>
 
@@ -2819,33 +2218,13 @@ alt="Montanhas">
 
 <div class="section-title">
 
-<span>EXPERIÊNCIAS</span>
+<span>VIAJANTES</span>
 
-<h2>O que nossos viajantes dizem</h2>
+<h2>Experiências compartilhadas</h2>
 
 </div>
-
 
 <div class="avaliacoes-grid">
-
-
-<div class="avaliacao">
-
-<div class="estrelas">
-★★★★★
-</div>
-
-<p>
-"Adorei conhecer novos destinos pelo
-Explora Brasil. O site é muito fácil de usar!"
-</p>
-
-<div class="usuario">
-— Mariana
-</div>
-
-</div>
-
 
 <div class="avaliacao">
 
@@ -2855,15 +2234,14 @@ Explora Brasil. O site é muito fácil de usar!"
 
 <p>
 "Descobri vários lugares que quero
-conhecer nas minhas próximas férias."
+conhecer nas minhas próximas férias!"
 </p>
 
 <div class="usuario">
-— Gabriel
+— Mariana
 </div>
 
 </div>
-
 
 <div class="avaliacao">
 
@@ -2872,8 +2250,25 @@ conhecer nas minhas próximas férias."
 </div>
 
 <p>
-"Uma ótima forma de conhecer melhor
-as regiões e a cultura do Brasil."
+"O site me ajudou a conhecer melhor
+as diferentes regiões do Brasil."
+</p>
+
+<div class="usuario">
+— Gabriel
+</div>
+
+</div>
+
+<div class="avaliacao">
+
+<div class="estrelas">
+★★★★★
+</div>
+
+<p>
+"Adorei as dicas e os destinos.
+Já estou planejando minha próxima viagem!"
 </p>
 
 <div class="usuario">
@@ -2881,7 +2276,6 @@ as regiões e a cultura do Brasil."
 </div>
 
 </div>
-
 
 </div>
 
@@ -2926,7 +2320,6 @@ Quero receber
 
 <div class="footer-grid">
 
-
 <div>
 
 <h3>
@@ -2962,60 +2355,31 @@ belezas do Brasil.
 
 </div>
 
-
 <div>
 
 <h3>Explorar</h3>
 
 <ul>
-
-<li>
-<a href="#estados">Estados</a>
-</li>
-
-<li>
-<a href="#destinos">Destinos</a>
-</li>
-
-<li>
-<a href="#regioes">Regiões</a>
-</li>
-
-<li>
-<a href="#experiencias">Experiências</a>
-</li>
-
+<li><a href="#estados">Estados</a></li>
+<li><a href="#destinos">Destinos</a></li>
+<li><a href="#regioes">Regiões</a></li>
+<li><a href="#experiencias">Experiências</a></li>
 </ul>
 
 </div>
-
 
 <div>
 
 <h3>Informações</h3>
 
 <ul>
-
-<li>
-<a href="#cultura">Cultura</a>
-</li>
-
-<li>
-<a href="#dicas">Dicas</a>
-</li>
-
-<li>
-<a href="#">Sobre nós</a>
-</li>
-
-<li>
-<a href="#">Privacidade</a>
-</li>
-
+<li><a href="#cultura">Cultura</a></li>
+<li><a href="#dicas">Dicas</a></li>
+<li><a href="#video">Vídeo</a></li>
+<li><a href="#contato">Contato</a></li>
 </ul>
 
 </div>
-
 
 <div>
 
@@ -3027,20 +2391,19 @@ contato@explorabrasil.com
 </p>
 
 <p>
-<i class="fa-solid fa-earth-americas"></i>
-Brasil
+<i class="fa-solid fa-phone"></i>
+(44) 99137-3500
 </p>
 
 </div>
 
-
 </div>
-
 
 <div class="copyright">
 
-© 2026 Explora Brasil —
-Todos os direitos reservados.
+© 2026 Explora Brasil 🇧🇷
+<br>
+Feito com ❤️ para explorar o Brasil.
 
 </div>
 
@@ -3048,13 +2411,30 @@ Todos os direitos reservados.
 
 
 <!-- =====================================================
-     BOTÃO TOPO
+     WHATSAPP
+===================================================== -->
+
+<a
+class="whatsapp"
+href="https://wa.me/5544991373500?text=Olá!%20Vim%20pelo%20site%20Explora%20Brasil%20e%20gostaria%20de%20saber%20mais."
+target="_blank"
+aria-label="Falar pelo WhatsApp">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+<span class="whatsapp-tooltip">
+Fale conosco pelo WhatsApp
+</span>
+
+</a>
+
+
+<!-- =====================================================
+     TOPO
 ===================================================== -->
 
 <a href="#inicio" id="topo">
-
 <i class="fa-solid fa-arrow-up"></i>
-
 </a>
 
 
@@ -3064,10 +2444,7 @@ Todos os direitos reservados.
 
 <script>
 
-
-/* =========================
-   MENU
-========================= */
+/* MENU */
 
 function abrirMenu(){
 
@@ -3079,9 +2456,7 @@ function abrirMenu(){
 }
 
 
-/* =========================
-   FILTRO DOS ESTADOS
-========================= */
+/* FILTRO DOS ESTADOS */
 
 function filtrar(regiao,botao){
 
@@ -3117,9 +2492,7 @@ function filtrar(regiao,botao){
 }
 
 
-/* =========================
-   PESQUISA
-========================= */
+/* BUSCA */
 
 function buscar(){
 
@@ -3132,7 +2505,7 @@ function buscar(){
 
     if(texto === ""){
 
-        alert("Digite um destino ou estado!");
+        alert("Digite um estado ou destino!");
 
         return;
 
@@ -3141,7 +2514,7 @@ function buscar(){
     const estados =
     document.querySelectorAll(".estado");
 
-    let encontrou=false;
+    let encontrou = false;
 
     estados.forEach(estado=>{
 
@@ -3179,7 +2552,7 @@ function buscar(){
 
         alert(
             "Não encontramos esse destino. " +
-            "Tente pesquisar outro estado ou cidade."
+            "Tente pesquisar outro estado."
         );
 
     }
@@ -3187,16 +2560,15 @@ function buscar(){
 }
 
 
-/* =========================
-   NEWSLETTER
-========================= */
+/* NEWSLETTER */
 
 function inscrever(){
 
     const email =
     document
     .getElementById("email")
-    .value;
+    .value
+    .trim();
 
     if(email === ""){
 
@@ -3214,9 +2586,7 @@ function inscrever(){
 
     }
 
-    alert(
-        "Cadastro realizado com sucesso! 🇧🇷✨"
-    );
+    alert("Cadastro realizado com sucesso! 🇧🇷✨");
 
     document
     .getElementById("email")
@@ -3225,9 +2595,7 @@ function inscrever(){
 }
 
 
-/* =========================
-   ANIMAÇÃO AO ROLAR
-========================= */
+/* ANIMAÇÃO */
 
 const elementos =
 document.querySelectorAll(".animar");
@@ -3258,17 +2626,12 @@ new IntersectionObserver(
 
 );
 
-
 elementos.forEach(elemento=>{
-
     observador.observe(elemento);
-
 });
 
 
-/* =========================
-   FECHAR MENU AO CLICAR
-========================= */
+/* FECHAR MENU */
 
 document
 .querySelectorAll("nav a")
@@ -3284,7 +2647,6 @@ document
     });
 
 });
-
 
 </script>
 
