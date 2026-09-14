@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Quiz | Explore Brasil</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="../css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+<a href="../index.html"
+class="logo">
+
+🇧🇷
+
+<span>
+Explore
+<strong>Brasil</strong>
+</span>
+
+</a>
+
+
+<button class="menu-toggle">
+☰
+</button>
+
+
+<nav class="nav">
+
+<a href="../index.html">
+Início
+</a>
+
+<a href="destinos.html">
+Destinos
+</a>
+
+<a href="natureza.html">
+Natureza
+</a>
+
+<a href="gastronomia.html">
+Gastronomia
+</a>
+
+<a href="quiz.html"
+class="active">
+Quiz
+</a>
+
+</nav>
+
+</header>
+
+
+<main>
+
+
+<section class="quiz-hero">
+
+<span class="eyebrow">
+✨ QUIZ INTERATIVO
+</span>
+
+<h1>
+Qual destino combina com você?
+</h1>
+
+<p>
+Escolha suas preferências e descubra
+seu estilo de viagem.
+</p>
+
+</section>
+
+
+<section class="quiz-container">
+
+
+<form id="travelQuiz">
+
+
+<!-- PERGUNTA 1 -->
+
+<div class="question">
+
+<span>
+01
+</span>
+
+<h2>
+O que você mais gostaria de fazer?
+</h2>
+
+
+<label>
+
+<input
+type="radio"
+name="q1"
+value="praia">
+
+🏖️ Relaxar na praia
+
+</label>
+
+
+<label>
+
+<input
+type="radio"
+name="q1"
+value="natureza">
+
+🌳 Explorar a natureza
+
+</label>
+
+
+<label>
+
+<input
+type="radio"
+name="q1"
+value="cidade">
+
+🏙️ Conhecer uma cidade
+
+</label>
+
+</div>
+
+
+<!-- PERGUNTA 2 -->
+
+<div class="question">
+
+<span>
+02
+</span>
+
+<h2>
+Qual cenário chama mais sua atenção?
+</h2>
+
+
+<label>
+
+<input
+type="radio"
+name="q2"
+value="praia">
+
+🌊 Mar azul
+
+</label>
+
+
+<label>
+
+<input
+type="radio"
+name="q2"
+value="natureza">
+
+⛰️ Montanhas e cachoeiras
+
+</label>
+
+
+<label>
+
+<input
+type="radio"
+name="q2"
+value="cidade">
+
+🌆 Prédios e vida urbana
+
+</label>
+
+</div>
+
+
+<!-- PERGUNTA 3 -->
+
+<div class="question">
+
+<span>
+03
+</span>
+
+<h2>
+Qual ritmo de viagem você prefere?
+</h2>
+
+
+<label>
+
+<input
+type="radio"
+name="q3"
+value="praia">
+
+😎 Tranquilo
+
+</label>
+
+
+<label>
+
+<input
+type="radio"
+name="q3"
+value="natureza">
+
+🥾 Aventureiro
+
+</label>
+
+
+<label>
+
+<input
+type="radio"
+name="q3"
+value="cidade">
+
+🎭 Agitado e cultural
+
+</label>
+
+</div>
+
+
+<button
+class="btn btn-primary quiz-btn"
+type="submit">
+
+Descobrir meu destino ✨
+
+</button>
+
+
+</form>
+
+
+<div
+id="quizResult"
+class="quiz-result"
+hidden>
+</div>
+
+
+</section>
+
+
+</main>
+
+
+<footer class="footer">
+
+<div>
+
+<a href="../index.html"
+class="logo footer-logo">
+
+🇧🇷 Explore
+<strong>Brasil</strong>
+
+</a>
+
+<p>
+Conheça, valorize e explore o Brasil.
+</p>
+
+</div>
+
+
+<p class="copyright">
+© 2026 Explore Brasil — Projeto escolar
+</p>
+
+</footer>
+
+
+<script src="../js/script.js"></script>
+
+<script src="../js/quiz.js"></script>
+
+</body>
+
+</html>
