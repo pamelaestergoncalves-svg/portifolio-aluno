@@ -1,381 +1,330 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JV CELL | Acessórios para Celular</title>
 
-    <meta name="description"
-        content="Explore Brasil - descubra destinos, natureza, cultura e gastronomia brasileira.">
+<!-- Ícones -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <title>Explore Brasil | Descubra o Brasil</title>
+<!-- Fonte -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
-        rel="stylesheet">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
 
-    <link rel="stylesheet" href="css/style.css">
+body{
+background:#111;
+color:#fff;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#000;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+box-shadow:0 0 20px #ffd000;
+}
+
+.logo{
+font-size:32px;
+font-weight:bold;
+color:#FFD700;
+}
+
+.logo i{
+margin-right:10px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+margin-left:25px;
+font-size:17px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#FFD700;
+}
+
+.banner{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:30px;
+background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+url("https://images.unsplash.com/photo-1511707171634-5f897ff02aa9") center/cover;
+}
+
+.banner h1{
+font-size:65px;
+color:#FFD700;
+margin-bottom:15px;
+text-shadow:0 0 20px #FFD700;
+}
+
+.banner p{
+font-size:22px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#FFD700;
+color:#000;
+text-decoration:none;
+font-weight:bold;
+border-radius:40px;
+transition:.4s;
+margin:10px;
+}
+
+.btn:hover{
+background:#fff;
+transform:scale(1.08);
+}
+
+.pesquisa{
+background:#1b1b1b;
+padding:60px 8%;
+text-align:center;
+}
+
+.pesquisa h2{
+font-size:40px;
+color:#FFD700;
+margin-bottom:25px;
+}
+
+.caixa-pesquisa{
+display:flex;
+justify-content:center;
+max-width:700px;
+margin:auto;
+}
+
+.caixa-pesquisa input{
+width:100%;
+padding:18px;
+border:none;
+font-size:18px;
+border-radius:50px 0 0 50px;
+outline:none;
+}
+
+.caixa-pesquisa button{
+padding:18px 30px;
+border:none;
+background:#FFD700;
+font-size:18px;
+cursor:pointer;
+border-radius:0 50px 50px 0;
+font-weight:bold;
+}
+
+.sobre{
+padding:90px 8%;
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+gap:50px;
+background:#111;
+}
+
+.sobre img{
+width:450px;
+max-width:100%;
+border-radius:20px;
+box-shadow:0 0 30px #FFD700;
+}
+
+.texto{
+flex:1;
+}
+
+.texto h2{
+font-size:45px;
+color:#FFD700;
+margin-bottom:20px;
+}
+
+.texto p{
+font-size:18px;
+line-height:1.9;
+}
+
+.destaques{
+padding:70px 8%;
+background:#1a1a1a;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#000;
+padding:35px;
+border-radius:18px;
+text-align:center;
+transition:.4s;
+border:2px solid transparent;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#FFD700;
+}
+
+.card i{
+font-size:55px;
+color:#FFD700;
+margin-bottom:20px;
+}
+
+.card h3{
+margin-bottom:15px;
+font-size:25px;
+}
+
+.card p{
+color:#ddd;
+}
+
+section{
+scroll-margin-top:100px;
+}
+
+</style>
 </head>
 
 <body>
 
-    <!-- CABEÇALHO -->
-    <header class="header">
+<header>
 
-        <a href="index.html" class="logo">
-            <span class="logo-icon">🇧🇷</span>
-            <span>Explore <strong>Brasil</strong></span>
-        </a>
+<div class="logo">
+<i class="fa-solid fa-mobile-screen-button"></i>
+JV CELL
+</div>
 
-        <button class="menu-toggle">☰</button>
+<nav>
+<a href="#inicio">Início</a>
+<a href="#sobre">Sobre</a>
+<a href="#produtos">Produtos</a>
+<a href="#servicos">Serviços</a>
+<a href="#contato">Contato</a>
+</nav>
 
-        <nav class="nav">
-            <a href="index.html" class="active">Início</a>
-            <a href="pages/destinos.html">Destinos</a>
-            <a href="pages/natureza.html">Natureza</a>
-            <a href="pages/gastronomia.html">Gastronomia</a>
-            <a href="pages/quiz.html">Quiz</a>
-        </nav>
+</header>
 
-    </header>
+<section class="banner" id="inicio">
 
+<div>
 
-    <!-- CONTEÚDO -->
-    <main>
+<h1>JV CELL</h1>
 
-        <!-- HERO -->
-        <section class="hero">
+<p>
+A melhor loja de acessórios para celular.
+Qualidade, preço baixo e atendimento de confiança.
+</p>
 
-            <div class="hero-content">
+<a href="#produtos" class="btn">
+Ver Produtos
+</a>
 
-                <span class="eyebrow">
-                    🌴 VIAJE PELO BRASIL
-                </span>
+<a href="#contato" class="btn">
+Fale Conosco
+</a>
 
-                <h1>
-                    Descubra lugares que
-                    <span>parecem um sonho.</span>
-                </h1>
+</div>
 
-                <p>
-                    Praias, cidades, natureza, cultura e sabores.
-                    Explore a diversidade do Brasil em um só lugar.
-                </p>
+</section>
 
-                <div class="hero-buttons">
+<section class="pesquisa">
 
-                    <a href="pages/destinos.html" class="btn btn-primary">
-                        Explorar destinos →
-                    </a>
+<h2>Encontre seu acessório</h2>
 
-                    <a href="pages/quiz.html" class="btn btn-light">
-                        Qual destino combina comigo?
-                    </a>
+<div class="caixa-pesquisa">
 
-                </div>
+<input
+type="text"
+placeholder="Pesquisar capinhas, cabos, carregadores, fones..."
+>
 
-            </div>
+<button>
+<i class="fa-solid fa-magnifying-glass"></i>
+</button>
 
-            <div class="scroll-hint">
-                ↓ role para explorar
-            </div>
+</div>
 
-        </section>
+</section>
 
+<section class="sobre" id="sobre">
 
-        <!-- SOBRE -->
-        <section class="section">
+<img src="https://images.unsplash.com/photo-1512499617640-c74ae3a79d37" alt="Loja">
 
-            <div class="section-heading">
+<div class="texto">
 
-                <div>
-                    <span class="eyebrow">
-                        INSPIRAÇÃO
-                    </span>
+<h2>Quem Somos</h2>
 
-                    <h2>
-                        O Brasil tem tudo isso.
-                    </h2>
-                </div>
+<p>
+A <strong>JV CELL</strong> é especializada em acessórios para celulares.
+Trabalhamos com capinhas, películas, cabos, carregadores, fones de ouvido e diversos acessórios de alta qualidade.
 
-                <p>
-                    Um país de paisagens, culturas e experiências
-                    diferentes em cada região.
-                </p>
+Também oferecemos serviços de <strong>impressão</strong> e <strong>xerox</strong>, sempre com rapidez, qualidade e ótimo atendimento.
+</p>
 
-            </div>
+</div>
 
+</section>
 
-            <div class="feature-grid">
+<section class="destaques">
 
-                <article class="feature-card">
+<div class="card">
+<i class="fa-solid fa-truck-fast"></i>
+<h3>Entrega Rápida</h3>
+<p>Agilidade e segurança em cada pedido.</p>
+</div>
 
-                    <span class="feature-icon">
-                        🏖️
-                    </span>
+<div class="card">
+<i class="fa-solid fa-shield-halved"></i>
+<h3>Qualidade Garantida</h3>
+<p>Acessórios das melhores marcas.</p>
+</div>
 
-                    <h3>
-                        Praias incríveis
-                    </h3>
+<div class="card">
+<i class="fa-solid fa-headset"></i>
+<h3>Atendimento</h3>
+<p>Suporte rápido pelo WhatsApp.</p>
+</div>
 
-                    <p>
-                        Do litoral nordestino às praias do Sul,
-                        existem cenários para todos os estilos.
-                    </p>
+<div class="card">
+<i class="fa-solid fa-print"></i>
+<h3>Impressão e Xerox</h3>
+<p>Documentos coloridos e preto e branco.</p>
+</div>
 
-                </article>
+</section>
 
-
-                <article class="feature-card">
-
-                    <span class="feature-icon">
-                        🌳
-                    </span>
-
-                    <h3>
-                        Natureza
-                    </h3>
-
-                    <p>
-                        Florestas, cachoeiras, montanhas e
-                        paisagens incríveis.
-                    </p>
-
-                </article>
-
-
-                <article class="feature-card">
-
-                    <span class="feature-icon">
-                        🍲
-                    </span>
-
-                    <h3>
-                        Sabores únicos
-                    </h3>
-
-                    <p>
-                        Cada região possui receitas e
-                        tradições que contam sua história.
-                    </p>
-
-                </article>
-
-
-                <article class="feature-card">
-
-                    <span class="feature-icon">
-                        🎭
-                    </span>
-
-                    <h3>
-                        Cultura brasileira
-                    </h3>
-
-                    <p>
-                        Festas, música, arte e tradições
-                        fazem parte da identidade do Brasil.
-                    </p>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- DESTINOS -->
-        <section class="section alt">
-
-            <div class="section-heading center">
-
-                <span class="eyebrow">
-                    DESTINOS EM DESTAQUE
-                </span>
-
-                <h2>
-                    Por onde começar?
-                </h2>
-
-                <p>
-                    Alguns lugares para colocar na sua lista de viagens.
-                </p>
-
-            </div>
-
-
-            <div class="destination-grid">
-
-
-                <a href="pages/destinos.html#rio"
-                    class="destination-card">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=1000&q=85"
-                        alt="Rio de Janeiro">
-
-                    <div class="card-overlay">
-
-                        <span>
-                            Sudeste
-                        </span>
-
-                        <h3>
-                            Rio de Janeiro
-                        </h3>
-
-                    </div>
-
-                </a>
-
-
-                <a href="pages/destinos.html#noronha"
-                    class="destination-card">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85"
-                        alt="Praia tropical">
-
-                    <div class="card-overlay">
-
-                        <span>
-                            Nordeste
-                        </span>
-
-                        <h3>
-                            Fernando de Noronha
-                        </h3>
-
-                    </div>
-
-                </a>
-
-
-                <a href="pages/destinos.html#foz"
-                    class="destination-card">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&w=1000&q=85"
-                        alt="Cataratas">
-
-                    <div class="card-overlay">
-
-                        <span>
-                            Sul
-                        </span>
-
-                        <h3>
-                            Foz do Iguaçu
-                        </h3>
-
-                    </div>
-
-                </a>
-
-            </div>
-
-
-            <div class="center-btn">
-
-                <a href="pages/destinos.html"
-                    class="btn btn-dark">
-
-                    Ver todos os destinos
-
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- QUIZ -->
-        <section class="cta">
-
-            <div>
-
-                <span class="eyebrow">
-                    ✨ UMA EXPERIÊNCIA INTERATIVA
-                </span>
-
-                <h2>
-                    Qual lugar do Brasil
-                    combina com você?
-                </h2>
-
-                <p>
-                    Responda algumas perguntas e descubra
-                    seu estilo de viagem.
-                </p>
-
-            </div>
-
-
-            <a href="pages/quiz.html"
-                class="btn btn-primary">
-
-                Fazer o quiz →
-
-            </a>
-
-        </section>
-
-    </main>
-
-
-    <!-- RODAPÉ -->
-    <footer class="footer">
-
-        <div>
-
-            <a href="index.html"
-                class="logo footer-logo">
-
-                🇧🇷 Explore
-                <strong>Brasil</strong>
-
-            </a>
-
-            <p>
-                Conheça, valorize e explore o Brasil.
-            </p>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <a href="pages/destinos.html">
-                Destinos
-            </a>
-
-            <a href="pages/natureza.html">
-                Natureza
-            </a>
-
-            <a href="pages/gastronomia.html">
-                Gastronomia
-            </a>
-
-            <a href="pages/quiz.html">
-                Quiz
-            </a>
-
-        </div>
-
-
-        <p class="copyright">
-            © 2026 Explore Brasil — Projeto escolar
-        </p>
-
-    </footer>
-
-
-    <script src="js/script.js"></script>
+<!-- A Parte 2 continuará com:
+Produtos, carrinho, promoções, avaliações e muito mais. -->
 
 </body>
-
 </html>
